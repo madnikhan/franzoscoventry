@@ -1,17 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { copyConfig } from "@/lib/data";
 import { OrderNowButton } from "./OrderNowButton";
 import { Sticker } from "./Sticker";
-import { HeroDishDots, HeroFoodStage, dishes } from "./HeroFoodStage";
+import { HeroFoodStage } from "./HeroFoodStage";
 
 export function HeroShowcase() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const dish = dishes[activeIndex] ?? dishes[0];
 
   useEffect(() => {
     const title = titleRef.current;
@@ -43,7 +41,6 @@ export function HeroShowcase() {
       ref={sectionRef}
       className="relative -mt-[var(--fz-nav-offset)] min-h-[100svh] overflow-hidden bg-[color:var(--fz-canvas)] px-[4vw] pb-[12vw] pt-[22vw] max-md:pt-[calc(8vw+1rem)] md:min-h-[85vh] md:pb-24 md:pt-32"
     >
-      {/* Feast atmosphere background */}
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -61,16 +58,14 @@ export function HeroShowcase() {
       </p>
 
       <div className="relative z-30 mx-auto mt-[1vw] max-w-6xl text-center">
-        <HeroDishDots activeIndex={activeIndex} onSelect={setActiveIndex} />
-
         <div className="pointer-events-none absolute left-[2vw] top-[8vw] z-40 max-md:left-[8%] max-md:top-[4vw]">
           <Sticker rotate={-12} className="text-[clamp(0.65rem,1.4vw,1rem)]">
-            {dish.badges[0] ?? copyConfig.stickerFresh}
+            {copyConfig.stickerFresh}
           </Sticker>
         </div>
         <div className="pointer-events-none absolute right-[2vw] top-[18vw] z-40 max-md:right-0 max-md:top-[12vw]">
           <Sticker rotate={8} className="text-[clamp(0.65rem,1.4vw,1rem)]">
-            {dish.badges[1] ?? copyConfig.stickerBold}
+            {copyConfig.stickerBold}
           </Sticker>
         </div>
 
@@ -89,9 +84,8 @@ export function HeroShowcase() {
         </p>
       </div>
 
-      {/* Large single-dish food-drop — overlaps lower headline */}
       <div className="relative z-[25] -mt-[10vw] flex justify-center max-md:-mt-[8vw] md:-mt-16">
-        <HeroFoodStage activeIndex={activeIndex} onIndexChange={setActiveIndex} />
+        <HeroFoodStage />
       </div>
 
       <div className="relative z-30 mx-auto -mt-[2vw] flex max-w-xl flex-col items-center text-center max-md:mt-0 md:-mt-4">
