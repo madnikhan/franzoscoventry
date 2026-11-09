@@ -3,7 +3,7 @@
 return [
     'slug' => 'franzos-coventry',
     'name' => 'Franzos Coventry',
-    'siteUrl' => 'https://franzoscoventry.co.uk',
+    'siteUrl' => 'https://franzoscoventry.vercel.app',
     'address' => [
         'line1' => '14 Corporation St',
         'city' => 'Coventry',

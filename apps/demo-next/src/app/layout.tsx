@@ -22,11 +22,16 @@ const modak = Modak({
 const siteUrl = (
   process.env.NEXT_PUBLIC_APP_URL ||
   (businessConfig as { siteUrl?: string }).siteUrl ||
-  "https://franzoscoventry.co.uk"
+  "https://franzoscoventry.vercel.app"
 ).replace(/\/$/, "");
 
+/** Stable public OG path (committed) + cache-bust for WhatsApp scrapers */
+const ogImageUrl = `${siteUrl}/og.jpg?v=3`;
+
 const ogImage = {
-  url: "/media/og/opengraph.jpg",
+  url: ogImageUrl,
+  secureUrl: ogImageUrl,
+  type: "image/jpeg",
   width: 1200,
   height: 630,
   alt: `${businessConfig.name} logo`,
@@ -62,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: businessConfig.name,
     description: copyConfig.tagline,
-    images: [ogImage.url],
+    images: [ogImageUrl],
   },
   icons: {
     icon: [{ url: "/media/logo/franzos-logo-nav.png", type: "image/png" }],

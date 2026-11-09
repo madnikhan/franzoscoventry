@@ -6,7 +6,7 @@
         $siteUrl = rtrim(config('franzos.siteUrl') ?: config('app.url'), '/');
         $pageTitle = trim($__env->yieldContent('title', $siteName));
         $pageDescription = trim($__env->yieldContent('meta_description', 'Flame-grilled peri chicken, secret sauces, unforgettable flavour.'));
-        $ogImage = $siteUrl.'/media/og/opengraph.jpg';
+        $ogImage = $siteUrl.'/og.jpg?v=3';
     @endphp
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,8 @@
     <meta property="og:title" content="{{ $pageTitle }}">
     <meta property="og:description" content="{{ $pageDescription }}">
     <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:image:secure_url" content="{{ $ogImage }}">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ $siteName }} logo">
