@@ -14,7 +14,7 @@
   --color-fz-outline: var(--fz-outline);
   --font-display: var(--font-mouse), var(--fz-font-display);
   --font-brand: var(--font-modak), var(--fz-font-brand);
-  --font-sans: var(--font-mouse), var(--fz-font-body);
+  --font-sans: var(--font-body), var(--fz-font-body);
 }
 
 * {
@@ -23,6 +23,7 @@
 
 html {
   overflow-x: clip;
+  color-scheme: dark;
 }
 
 html.lenis,
@@ -36,9 +37,9 @@ html.lenis body {
 
 body {
   background: var(--fz-canvas);
-  color: var(--fz-outline);
-  font-family: var(--font-mouse), var(--fz-font-body);
-  letter-spacing: 0.02em;
+  color: var(--fz-ink);
+  font-family: var(--font-body), var(--fz-font-body);
+  letter-spacing: 0.01em;
   overflow-x: clip;
 }
 
@@ -53,46 +54,51 @@ body {
 }
 
 .fz-outline-text {
-  color: var(--fz-tomato);
-  -webkit-text-stroke: 2px var(--fz-white);
+  color: var(--fz-mustard);
+  -webkit-text-stroke: 1.5px rgba(246, 231, 200, 0.35);
   paint-order: stroke fill;
-  text-shadow: 3px 3px 0 var(--fz-outline);
+  text-shadow:
+    0 0 24px rgba(213, 153, 91, 0.35),
+    3px 3px 0 rgba(112, 77, 109, 0.85);
 }
 
 .fz-card {
   border-radius: 1.25rem;
-  background: var(--fz-white);
+  background: var(--fz-surface);
   box-shadow: var(--fz-shadow);
-  border: 3px solid var(--fz-outline);
+  border: 2px solid rgba(112, 77, 109, 0.65);
+  color: var(--fz-ink);
 }
 
 .fz-btn {
   @apply inline-flex items-center justify-center px-5 py-2 font-semibold transition;
   border-radius: 999px;
-  border: 3px solid var(--fz-outline);
-  box-shadow: 3px 3px 0 var(--fz-outline);
+  border: 2px solid var(--fz-outline);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  color: var(--fz-ink);
 }
 
 .fz-btn-primary {
-  background: var(--fz-tomato);
-  color: white;
+  background: linear-gradient(135deg, var(--fz-tomato), #8a3550);
+  color: #fff6ee;
+  border-color: var(--fz-rose);
 }
 
 .fz-btn-primary:hover {
-  background: var(--fz-flame-deep);
+  background: linear-gradient(135deg, var(--fz-flame-deep), var(--fz-tomato));
   transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--fz-outline);
+  box-shadow: 0 12px 28px rgba(161, 67, 91, 0.45);
 }
 
 .fz-sticker {
   display: inline-block;
-  background: var(--fz-mustard);
-  color: var(--fz-outline);
-  border: 3px solid var(--fz-outline);
+  background: linear-gradient(135deg, var(--fz-mustard), var(--fz-mustard-deep));
+  color: #120d14;
+  border: 2px solid var(--fz-outline);
   border-radius: 0.75rem;
   padding: 0.35rem 0.75rem;
   font-weight: 700;
-  box-shadow: 3px 3px 0 var(--fz-outline);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
 }
 
@@ -107,6 +113,14 @@ body {
 .marketing-main {
   max-width: none;
   width: 100%;
+}
+
+input,
+select,
+textarea {
+  color: var(--fz-ink);
+  background: var(--fz-elevated);
+  border-color: var(--fz-sand);
 }
 
 html.fz-custom-cursor,

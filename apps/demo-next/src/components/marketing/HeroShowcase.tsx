@@ -51,11 +51,12 @@ export function HeroShowcase() {
           alt=""
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--fz-canvas)]/92 via-[color:var(--fz-canvas)]/78 to-[color:var(--fz-canvas)]/95" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-[color:var(--fz-tomato)]/25 via-transparent to-[color:var(--fz-outline)]/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--fz-canvas)]/95 via-[color:var(--fz-canvas)]/78 to-[color:var(--fz-canvas)]/96" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[color:var(--fz-tomato)]/35 via-transparent to-[color:var(--fz-mustard)]/15" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(18,13,20,0.75)_100%)]" />
       </div>
 
-      <p className="relative z-30 text-center text-[clamp(0.7rem,1.5vw,1rem)] font-bold tracking-[0.2em] text-[color:var(--fz-outline)]/70">
+      <p className="relative z-30 text-center text-[clamp(0.7rem,1.5vw,1rem)] font-bold tracking-[0.2em] text-[color:var(--fz-muted)]">
         {copyConfig.heroEyebrow}
       </p>
 
@@ -94,7 +95,7 @@ export function HeroShowcase() {
       </div>
 
       <div className="relative z-30 mx-auto -mt-[2vw] flex max-w-xl flex-col items-center text-center max-md:mt-0 md:-mt-4">
-        <p className="text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[color:var(--fz-outline)]">
+        <p className="text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[color:var(--fz-ink)]/90">
           {copyConfig.heroSub}
         </p>
         <div className="mt-[3vw] max-md:mt-8">

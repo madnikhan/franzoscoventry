@@ -11,7 +11,7 @@ const STATUS = [
   "READY TO SERVE FRANZOS...",
 ];
 
-const LOADER_KEY = "franzos_loader_weekend_v1";
+const LOADER_KEY = "franzos_loader_dark_v1";
 const HERO_SRC = "/media/loader/weekend-burgers.png";
 
 export function PageLoader({ onDone }: { onDone?: () => void }) {
@@ -145,9 +145,9 @@ export function PageLoader({ onDone }: { onDone?: () => void }) {
       role="dialog"
       aria-modal="true"
       aria-label="Page loading"
-      className="fixed inset-0 z-[99999] flex h-dvh w-full flex-col items-center justify-center overflow-hidden bg-[color:var(--fz-tomato)]"
+      className="fixed inset-0 z-[99999] flex h-dvh w-full flex-col items-center justify-center overflow-hidden bg-[color:var(--fz-canvas)]"
     >
-      {["#F91814", "#EF6F2E", "#4C0016"].map((c, i) => (
+      {["#a1435b", "#704d6d", "#120d14"].map((c, i) => (
         <svg
           key={c}
           data-curtain
@@ -180,22 +180,22 @@ export function PageLoader({ onDone }: { onDone?: () => void }) {
                 data-crumb
                 className="absolute h-2 w-2 rounded-full md:h-2.5 md:w-2.5"
                 style={{
-                  background: i % 3 === 0 ? "#FFD750" : i % 3 === 1 ? "#FFF6EE" : "#F91814",
+                  background: i % 3 === 0 ? "#d5995b" : i % 3 === 1 ? "#f6e7c8" : "#a1435b",
                 }}
               />
             ))}
           </div>
         </div>
 
-        <p className="loader-ready mt-2 origin-center scale-75 text-center font-display text-[clamp(1.75rem,6vw,3.5rem)] tracking-wide text-white opacity-0">
+        <p className="loader-ready mt-2 origin-center scale-75 text-center font-display text-[clamp(1.75rem,6vw,3.5rem)] tracking-wide text-[color:var(--fz-mustard)] opacity-0">
           {copyConfig.loaderReady}
         </p>
-        <p className="mt-3 max-w-[90vw] text-center text-[clamp(0.7rem,2.5vw,1rem)] font-semibold tracking-widest text-white/90">
+        <p className="mt-3 max-w-[90vw] text-center text-[clamp(0.7rem,2.5vw,1rem)] font-semibold tracking-widest text-[color:var(--fz-ink)]/90">
           {status}
         </p>
-        <div className="mt-5 h-2 w-[56vw] max-w-[320px] overflow-hidden rounded-full bg-black/20 md:h-2.5 md:w-80">
+        <div className="mt-5 h-2 w-[56vw] max-w-[320px] overflow-hidden rounded-full bg-[color:var(--fz-elevated)] md:h-2.5 md:w-80">
           <div
-            className="h-full rounded-full bg-[color:var(--fz-mustard)]"
+            className="h-full rounded-full bg-gradient-to-r from-[color:var(--fz-tomato)] to-[color:var(--fz-mustard)]"
             style={{ width: `${progress}%` }}
           />
         </div>

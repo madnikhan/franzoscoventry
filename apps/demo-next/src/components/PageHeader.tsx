@@ -11,7 +11,7 @@ export function PageHeader({
         {title}
       </h1>
       {subtitle && (
-        <p className="mt-3 max-w-2xl text-base font-semibold text-[color:var(--fz-outline)]/80 md:text-lg">
+        <p className="mt-3 max-w-2xl text-base font-semibold text-[color:var(--fz-muted)] md:text-lg">
           {subtitle}
         </p>
       )}

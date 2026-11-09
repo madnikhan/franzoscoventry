@@ -1,13 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import dishesData from "@/data/dishes.json";
 
 export type Dish = (typeof dishesData.dishes)[number];
 
 const dishes = dishesData.dishes as Dish[];
-const HOLD_MS = 3500;
+const HOLD_MS = 3800;
 const STAGGER = 0.28;
 const SPRING = { type: "spring" as const, stiffness: 140, damping: 22 };
 
@@ -20,6 +20,8 @@ export function HeroFoodStage({ activeIndex, onIndexChange }: Props) {
   const reduce = useReducedMotion();
   const dish = dishes[activeIndex] ?? dishes[0];
   const [phase, setPhase] = useState<"enter" | "hold" | "exit">("enter");
+  const stageRef = useRef<HTMLDivElement>(null);
+  const parallaxRef = useRef({ x: 0, y: 0 });
 
   const goNext = useCallback(() => {
     onIndexChange((activeIndex + 1) % dishes.length);
@@ -44,10 +46,50 @@ export function HeroFoodStage({ activeIndex, onIndexChange }: Props) {
     };
   }, [activeIndex, dish.layers.length, goNext, reduce]);
 
+  useEffect(() => {
+    if (reduce) return;
+    const stage = stageRef.current;
+    if (!stage) return;
+
+    let raf = 0;
+    const onMove = (e: PointerEvent) => {
+      const rect = stage.getBoundingClientRect();
+      const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      parallaxRef.current = { x: nx, y: ny };
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const layers = stage.querySelectorAll<HTMLElement>("[data-hero-layer]");
+        layers.forEach((layer, i) => {
+          const depth = (i + 1) * 6;
+          layer.style.transform = `translate3d(${nx * depth}px, ${ny * depth}px, 0)`;
+        });
+      });
+    };
+
+    const onLeave = () => {
+      const layers = stage.querySelectorAll<HTMLElement>("[data-hero-layer]");
+      layers.forEach((layer) => {
+        layer.style.transform = "translate3d(0,0,0)";
+      });
+    };
+
+    stage.addEventListener("pointermove", onMove);
+    stage.addEventListener("pointerleave", onLeave);
+    return () => {
+      cancelAnimationFrame(raf);
+      stage.removeEventListener("pointermove", onMove);
+      stage.removeEventListener("pointerleave", onLeave);
+    };
+  }, [reduce, activeIndex]);
+
   return (
-    <div className="relative mx-auto aspect-square w-[min(680px,62vw)] max-md:w-[min(88vw,560px)]">
+    <div
+      ref={stageRef}
+      className="relative mx-auto aspect-square w-[min(680px,62vw)] max-md:w-[min(88vw,560px)]"
+    >
       <div
-        className="pointer-events-none absolute left-1/2 top-[82%] h-[16%] w-[72%] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(74,47,72,0.42)_0%,transparent_72%)] blur-[3px]"
+        className="pointer-events-none absolute left-1/2 top-[82%] h-[16%] w-[72%] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(213,153,91,0.32)_0%,transparent_72%)] blur-[3px]"
         aria-hidden
       />
       <AnimatePresence mode="wait">
@@ -60,8 +102,8 @@ export function HeroFoodStage({ activeIndex, onIndexChange }: Props) {
               ? { opacity: 0, y: -28, transition: { duration: 0.38 } }
               : phase === "hold" && !reduce
                 ? {
-                    y: [0, -12, 0],
-                    transition: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
+                    y: [0, -14, 0],
+                    transition: { duration: 2.8, repeat: Infinity, ease: "easeInOut" },
                   }
                 : { opacity: 1, y: 0 }
           }
@@ -71,13 +113,14 @@ export function HeroFoodStage({ activeIndex, onIndexChange }: Props) {
             // eslint-disable-next-line @next/next/no-img-element
             <motion.img
               key={`${dish.id}-${layer.order}`}
+              data-hero-layer
               src={layer.src}
               alt=""
               width={1200}
               height={1200}
               draggable={false}
-              className="pointer-events-none absolute inset-0 h-full w-full object-contain drop-shadow-[0_14px_22px_rgba(74,47,72,0.4)]"
-              style={{ zIndex: Number(layer.order) }}
+              className="pointer-events-none absolute inset-0 h-full w-full object-contain drop-shadow-[0_18px_36px_rgba(0,0,0,0.55)] will-change-transform"
+              style={{ zIndex: Number(layer.order), transition: "transform 120ms linear" }}
               initial={reduce ? false : { y: -280, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={reduce ? { duration: 0 } : { ...SPRING, delay: i * STAGGER }}
@@ -115,8 +158,8 @@ export function HeroDishDots({
             onClick={() => onSelect(i)}
             className={`w-2 rounded-full border border-[color:var(--fz-outline)] transition-all md:w-2.5 ${
               active
-                ? "h-4 bg-[color:var(--fz-tomato)] md:h-5"
-                : "h-2 bg-[color:var(--fz-mustard)]/80 hover:bg-[color:var(--fz-tomato)]/70 md:h-2.5"
+                ? "h-4 bg-[color:var(--fz-mustard)] md:h-5"
+                : "h-2 bg-[color:var(--fz-rose)]/70 hover:bg-[color:var(--fz-mustard)]/70 md:h-2.5"
             }`}
           />
         );

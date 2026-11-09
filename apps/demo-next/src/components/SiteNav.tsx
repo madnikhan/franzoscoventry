@@ -85,8 +85,8 @@ export function SiteNav() {
                 href={l.href}
                 className={`rounded-full px-3 py-1.5 ${
                   pathname.startsWith(l.href)
-                    ? "bg-[color:var(--fz-tomato)] text-white"
-                    : "bg-white"
+                    ? "bg-[color:var(--fz-tomato)] text-[color:var(--fz-ink)]"
+                    : "bg-[color:var(--fz-elevated)] text-[color:var(--fz-ink)]"
                 }`}
               >
                 {l.label}
@@ -114,7 +114,7 @@ export function SiteNav() {
         <Link
           href="/menu"
           data-cursor-hide
-          className="flex items-center justify-center rounded-full bg-[color:var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[color:var(--fz-canvas)] transition-all duration-300 hover:scale-105 hover:bg-[color:var(--fz-outline)] max-md:px-[5vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:px-[1.6vw] lg:py-[0.5vw] lg:text-[1.3vw]"
+          className="flex items-center justify-center rounded-full bg-[color:var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[#fff6ee] transition-all duration-300 hover:scale-105 hover:bg-[color:var(--fz-mustard)] hover:text-[#120d14] max-md:px-[5vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:px-[1.6vw] lg:py-[0.5vw] lg:text-[1.3vw]"
         >
           Menu
         </Link>
@@ -123,7 +123,7 @@ export function SiteNav() {
           href="/order"
           data-cursor-hide
           aria-label={count > 0 ? `Cart, ${count} items` : "Cart"}
-          className="relative flex items-center justify-center rounded-full border-2 border-[color:var(--fz-outline)] bg-[color:var(--fz-mustard)] px-3.5 py-2 text-[color:var(--fz-outline)] shadow-[2px_2px_0_var(--fz-outline)] transition-all duration-300 hover:scale-105 max-md:border-[0.4vw] max-md:px-[3.5vw] max-md:py-[1.6vw] lg:border-[0.15vw] lg:px-[1.2vw] lg:py-[0.45vw]"
+          className="relative flex items-center justify-center rounded-full border-2 border-[color:var(--fz-outline)] bg-[color:var(--fz-mustard)] px-3.5 py-2 text-[#120d14] shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105 max-md:border-[0.4vw] max-md:px-[3.5vw] max-md:py-[1.6vw] lg:border-[0.15vw] lg:px-[1.2vw] lg:py-[0.45vw]"
         >
           <svg
             viewBox="0 0 24 24"
@@ -153,7 +153,7 @@ export function SiteNav() {
             aria-expanded={open}
             aria-controls="main-menu"
             onClick={() => setOpen((v) => !v)}
-            className="flex cursor-pointer items-center gap-2 rounded-full border-2 border-[color:var(--fz-tomato)] bg-[color:var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[color:var(--fz-canvas)] transition-all duration-400 hover:scale-105 max-md:gap-[2vw] max-md:border-[0.4vw] max-md:px-[4vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:gap-[0.6vw] lg:border-[0.15vw] lg:px-[1.4vw] lg:py-[0.5vw] lg:text-[1.3vw]"
+            className="flex cursor-pointer items-center gap-2 rounded-full border-2 border-[color:var(--fz-rose)] bg-[color:var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[#fff6ee] transition-all duration-400 hover:scale-105 max-md:gap-[2vw] max-md:border-[0.4vw] max-md:px-[4vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:gap-[0.6vw] lg:border-[0.15vw] lg:px-[1.4vw] lg:py-[0.5vw] lg:text-[1.3vw]"
           >
             {open ? (
               <>
@@ -164,9 +164,9 @@ export function SiteNav() {
               </>
             ) : (
               <span aria-hidden className="inline-flex h-4 w-5 flex-col justify-center gap-1 max-md:h-4 max-md:w-5 lg:h-[1.2vw] lg:min-h-[1.1rem] lg:w-[1.6vw] lg:min-w-[1.25rem] lg:gap-[0.28vw]">
-                <span className="block h-0.5 w-full rounded-full bg-[color:var(--fz-canvas)] lg:h-[0.22vw] lg:min-h-[2px]" />
-                <span className="block h-0.5 w-full rounded-full bg-[color:var(--fz-canvas)] lg:h-[0.22vw] lg:min-h-[2px]" />
-                <span className="block h-0.5 w-full rounded-full bg-[color:var(--fz-canvas)] lg:h-[0.22vw] lg:min-h-[2px]" />
+                <span className="block h-0.5 w-full rounded-full bg-[#fff6ee] lg:h-[0.22vw] lg:min-h-[2px]" />
+                <span className="block h-0.5 w-full rounded-full bg-[#fff6ee] lg:h-[0.22vw] lg:min-h-[2px]" />
+                <span className="block h-0.5 w-full rounded-full bg-[#fff6ee] lg:h-[0.22vw] lg:min-h-[2px]" />
               </span>
             )}
           </button>
@@ -175,7 +175,7 @@ export function SiteNav() {
             id="main-menu"
             ref={menuRef}
             role="menu"
-            className="absolute top-[calc(100%+0.75rem)] right-0 w-[min(22rem,calc(100vw-1.5rem))] rounded-2xl bg-[color:var(--fz-tomato)] p-5 shadow-[0_12px_32px_rgba(27,27,27,.25)] max-md:mt-[5vw] max-md:rounded-[4vw] max-md:p-[6vw] lg:top-[calc(100%+1vw)] lg:w-[min(18vw,22rem)] lg:rounded-[1.2vw] lg:p-[2vw] lg:shadow-[0_1vw_3vw_rgba(27,27,27,.25)]"
+            className="absolute top-[calc(100%+0.75rem)] right-0 w-[min(22rem,calc(100vw-1.5rem))] rounded-2xl border border-[color:var(--fz-outline)] bg-[color:var(--fz-elevated)] p-5 shadow-[0_16px_48px_rgba(0,0,0,.55)] max-md:mt-[5vw] max-md:rounded-[4vw] max-md:p-[6vw] lg:top-[calc(100%+1vw)] lg:w-[min(18vw,22rem)] lg:rounded-[1.2vw] lg:p-[2vw]"
             style={{ opacity: 0, pointerEvents: "none" }}
           >
             <ul className="flex flex-col gap-3 max-md:gap-[4vw] lg:gap-[1.2vw]">
@@ -184,7 +184,7 @@ export function SiteNav() {
                   <Link
                     role="menuitem"
                     href={item.href}
-                    className="block font-display text-base uppercase tracking-wide text-[color:var(--fz-canvas)] transition hover:text-[color:var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]"
+                    className="block font-display text-base uppercase tracking-wide text-[color:var(--fz-ink)] transition hover:text-[color:var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
@@ -193,7 +193,7 @@ export function SiteNav() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 border-t border-white/30 pt-3 text-xs font-semibold uppercase tracking-wider text-[color:var(--fz-canvas)]/80 max-md:mt-[5vw] max-md:pt-[4vw] max-md:text-[3.2vw] lg:mt-[2vw] lg:pt-[1.2vw] lg:text-[0.85vw]">
+            <p className="mt-4 border-t border-[color:var(--fz-outline)]/50 pt-3 text-xs font-semibold uppercase tracking-wider text-[color:var(--fz-muted)] max-md:mt-[5vw] max-md:pt-[4vw] max-md:text-[3.2vw] lg:mt-[2vw] lg:pt-[1.2vw] lg:text-[0.85vw]">
               Est. Coventry — Corporation Street
             </p>
           </div>

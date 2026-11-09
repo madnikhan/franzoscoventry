@@ -65,7 +65,7 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
             key={step}
             className={`min-w-0 rounded-xl border px-3 py-2 text-xs font-semibold ${
               i <= stepIndex
-                ? "border-[color:var(--fz-flame)] bg-[color:var(--fz-cream)]"
+                ? "border-[color:var(--fz-mustard)] bg-[color:var(--fz-elevated)] text-[color:var(--fz-mustard)]"
                 : "border-[color:var(--fz-sand)] opacity-50"
             }`}
           >

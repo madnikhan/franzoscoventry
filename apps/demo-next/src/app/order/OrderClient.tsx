@@ -136,8 +136,8 @@ export function OrderClient() {
                 onClick={() => setType(t)}
                 className={`flex-1 rounded-xl border px-3 py-2 text-sm font-semibold ${
                   type === t
-                    ? "border-[color:var(--fz-flame)] bg-[color:var(--fz-flame)] text-white"
-                    : "border-[color:var(--fz-sand)]"
+                    ? "border-[color:var(--fz-tomato)] bg-[color:var(--fz-tomato)] text-[#fff6ee]"
+                    : "border-[color:var(--fz-sand)] bg-[color:var(--fz-elevated)] text-[color:var(--fz-ink)]"
                 }`}
               >
                 {t === "DELIVERY" ? "Delivery" : "Collection"}
@@ -205,8 +205,8 @@ export function OrderClient() {
               onClick={() => setPaymentMethod(m)}
               className={`rounded-xl border px-4 py-2 text-sm font-semibold capitalize ${
                 paymentMethod === m
-                  ? "border-[color:var(--fz-char)] bg-[color:var(--fz-char)] text-white"
-                  : "border-[color:var(--fz-sand)]"
+                  ? "border-[color:var(--fz-mustard)] bg-[color:var(--fz-mustard)] text-[#120d14]"
+                  : "border-[color:var(--fz-sand)] bg-[color:var(--fz-elevated)] text-[color:var(--fz-ink)]"
               }`}
             >
               {m}

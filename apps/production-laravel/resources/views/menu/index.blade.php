@@ -21,12 +21,12 @@
 
     <nav
         aria-label="Menu categories"
-        class="sticky top-[var(--fz-nav-sticky)] z-20 -mx-4 mt-6 flex min-w-0 w-full max-w-full gap-2 overflow-x-auto overscroll-x-contain bg-[var(--fz-cream)]/95 px-4 py-3 backdrop-blur-sm [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden max-md:border-b max-md:border-[var(--fz-outline)]/15 lg:mx-0 lg:mt-8 lg:grid lg:grid-cols-5 lg:gap-2 lg:overflow-visible lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:backdrop-blur-none"
+        class="sticky top-[var(--fz-nav-sticky)] z-20 -mx-4 mt-6 flex min-w-0 w-full max-w-full gap-2 overflow-x-auto overscroll-x-contain bg-[var(--fz-canvas)]/95 px-4 py-3 backdrop-blur-sm [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden max-md:border-b max-md:border-[var(--fz-outline)]/30 lg:mx-0 lg:mt-8 lg:grid lg:grid-cols-5 lg:gap-2 lg:overflow-visible lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:backdrop-blur-none"
     >
         @foreach ($categories as $category)
             <a
                 href="#{{ $category->slug }}"
-                class="snap-start shrink-0 rounded-full border-[3px] border-[var(--fz-outline)] bg-white px-3.5 py-2 text-center text-sm font-bold text-[var(--fz-outline)] shadow-[3px_3px_0_var(--fz-outline)] transition hover:bg-[var(--fz-mustard)] lg:w-full"
+                class="snap-start shrink-0 rounded-full border-2 border-[var(--fz-outline)] bg-[var(--fz-surface)] px-3.5 py-2 text-center text-sm font-bold text-[var(--fz-ink)] shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition hover:bg-[var(--fz-mustard)] hover:text-[#120d14] lg:w-full"
             >
                 {{ $category->name }}
             </a>
@@ -40,7 +40,7 @@
                 @foreach ($category->menuItems as $item)
                     <article class="fz-card min-w-0 overflow-hidden">
                         @if ($item->image)
-                            <div class="aspect-[4/3] overflow-hidden bg-[var(--fz-cream)]">
+                            <div class="aspect-[4/3] overflow-hidden bg-[var(--fz-elevated)]">
                                 <img
                                     src="{{ $item->image }}"
                                     alt=""

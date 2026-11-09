@@ -40,10 +40,11 @@
     <section id="hero" class="relative -mt-[var(--fz-nav-offset)] min-h-[100svh] overflow-hidden bg-[var(--fz-canvas)] px-[4vw] pt-[22vw] pb-[12vw] max-md:pt-[calc(8vw+1rem)] md:min-h-[85vh] md:pt-32 md:pb-24">
         <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
             <img src="{{ asset('media/hero/feast-table.jpg') }}" alt="" class="h-full w-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-b from-[var(--fz-canvas)]/92 via-[var(--fz-canvas)]/78 to-[var(--fz-canvas)]/95"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-[var(--fz-tomato)]/25 via-transparent to-[var(--fz-outline)]/20"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[var(--fz-canvas)]/95 via-[var(--fz-canvas)]/78 to-[var(--fz-canvas)]/96"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-[var(--fz-tomato)]/35 via-transparent to-[var(--fz-mustard)]/15"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(18,13,20,0.75)_100%)]"></div>
         </div>
-        <p class="relative z-30 text-center text-[clamp(0.7rem,1.5vw,1rem)] font-bold tracking-[0.2em] text-[var(--fz-outline)]/70">{{ $copy['heroEyebrow'] ?? '' }}</p>
+        <p class="relative z-30 text-center text-[clamp(0.7rem,1.5vw,1rem)] font-bold tracking-[0.2em] text-[var(--fz-muted)]">{{ $copy['heroEyebrow'] ?? '' }}</p>
         <div class="relative z-30 mx-auto mt-[1vw] max-w-6xl text-center">
             <div id="hero-dish-dots" class="pointer-events-auto absolute left-0 top-1/2 z-40 hidden max-h-[min(48vh,420px)] -translate-y-1/2 flex-col items-center gap-1.5 overflow-y-auto py-1 md:left-[1vw] md:flex md:gap-2" role="tablist" aria-label="Dish slides"></div>
             <span id="hero-sticker-left" class="fz-sticker absolute left-[2vw] top-[8vw] z-40 -rotate-12 max-md:left-[8%] max-md:top-[4vw]">{{ $copy['stickerFresh'] ?? 'FLAME GRILLED' }}</span>
@@ -53,7 +54,7 @@
         </div>
         <div class="relative z-[25] -mt-[10vw] flex justify-center max-md:-mt-[8vw] md:-mt-16">
             <div class="relative mx-auto aspect-square w-[min(680px,62vw)] max-md:w-[min(88vw,560px)]">
-                <div class="pointer-events-none absolute left-1/2 top-[82%] h-[16%] w-[72%] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(76,0,22,0.42)_0%,transparent_72%)] blur-[3px]" aria-hidden="true"></div>
+                <div class="pointer-events-none absolute left-1/2 top-[82%] h-[16%] w-[72%] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(213,153,91,0.32)_0%,transparent_72%)] blur-[3px]" aria-hidden="true"></div>
                 <div id="hero-food-stage" class="absolute inset-0" aria-live="polite"></div>
             </div>
         </div>
@@ -64,7 +65,7 @@
     </section>
 
     <section class="bg-[var(--fz-canvas)] px-[4vw] py-[8vw] text-center max-md:py-16">
-        <p class="text-[clamp(0.7rem,1.4vw,0.95rem)] font-bold tracking-[0.25em] text-[var(--fz-tomato)]">TOP CLASSIC</p>
+        <p class="text-[clamp(0.7rem,1.4vw,0.95rem)] font-bold tracking-[0.25em] text-[var(--fz-mustard)]">TOP CLASSIC</p>
         <h2 class="fz-outline-text mx-auto mt-[1.5vw] max-w-5xl font-display text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.9]">{{ $copy['statementTitle'] ?? '' }}</h2>
         <p class="mx-auto mt-[2vw] max-w-2xl text-[clamp(1rem,2vw,1.35rem)] font-semibold">{{ $copy['statementBody'] ?? '' }}</p>
         <a href="{{ route('order.checkout') }}" class="fz-btn mt-[3vw] inline-flex max-md:mt-8">{{ $copy['ctaOrder'] ?? 'Order Now' }}</a>

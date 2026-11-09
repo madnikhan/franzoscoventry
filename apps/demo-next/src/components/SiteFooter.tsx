@@ -60,15 +60,15 @@ export function SiteFooter() {
   }, []);
 
   return (
-    <footer className="relative mt-auto overflow-hidden border-t-[3px] border-[color:var(--fz-outline)] bg-[color:var(--fz-canvas)] text-[color:var(--fz-outline)]">
+    <footer className="relative mt-auto overflow-hidden border-t border-[color:var(--fz-outline)]/60 bg-[color:var(--fz-surface)] text-[color:var(--fz-ink)]">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-8">
         <nav className="flex flex-wrap gap-4 text-lg font-bold" aria-label="Footer navigation">
-          <Link href="/">Home</Link>
-          <Link href="/menu">Menu</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" className="hover:text-[color:var(--fz-mustard)]">Home</Link>
+          <Link href="/menu" className="hover:text-[color:var(--fz-mustard)]">Menu</Link>
+          <Link href="/about" className="hover:text-[color:var(--fz-mustard)]">About</Link>
+          <Link href="/contact" className="hover:text-[color:var(--fz-mustard)]">Contact</Link>
         </nav>
-        <p className="text-base font-semibold">{copyConfig.footerLine}</p>
+        <p className="text-base font-semibold text-[color:var(--fz-muted)]">{copyConfig.footerLine}</p>
       </div>
 
       <div ref={stageRef} className="relative h-52 md:h-72">
@@ -86,11 +86,11 @@ export function SiteFooter() {
         <img
           src="/media/logo/franzos-logo.png"
           alt="Franzos"
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-auto max-w-[90%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_4px_0_var(--fz-outline)]"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-auto max-w-[90%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_12px_32px_rgba(213,153,91,0.35)]"
         />
       </div>
 
-      <div className="border-t-[3px] border-[color:var(--fz-outline)]/20 px-4 py-3 text-center text-sm">
+      <div className="border-t border-[color:var(--fz-outline)]/40 px-4 py-3 text-center text-sm text-[color:var(--fz-muted)]">
         © {new Date().getFullYear()} {businessConfig.name} · {copyConfig.footerBlurb}
       </div>
     </footer>

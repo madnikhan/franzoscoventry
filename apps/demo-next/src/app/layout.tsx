@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mouse_Memoirs, Modak } from "next/font/google";
+import { Mouse_Memoirs, Modak, Outfit } from "next/font/google";
 import { CartProvider } from "@/context/CartContext";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
@@ -17,6 +17,11 @@ const modak = Modak({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-modak",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-body",
 });
 
 const siteUrl = (
@@ -83,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${mouse.variable} ${modak.variable} flex min-h-screen flex-col antialiased`}
+        className={`${mouse.variable} ${modak.variable} ${outfit.variable} flex min-h-screen flex-col antialiased`}
       >
         <CartProvider>
           <MarketingChrome>

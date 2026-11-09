@@ -1,35 +1,39 @@
 :root {
-  /* Franzos — placemat mosaic palette (cream, terracotta, mustard, plum) */
-  --fz-canvas: #f0e6c8;
-  --fz-tomato: #c45a2c;
-  --fz-mustard: #e0a83a;
-  --fz-mustard-deep: #d18d44;
-  --fz-outline: #4a2f48;
-  --fz-cream: #f0e6c8;
-  --fz-sand: #d4c4a0;
-  --fz-char: #1b1b1b;
-  --fz-smoke: #4a2f48;
-  --fz-white: #ffffff;
-  --fz-muted: #6b4a3a;
-  --fz-leaf: #57725f;
-  --fz-ember: #c45a2c;
-  --fz-gold: #e0a83a;
-  --fz-plum: #6b3a6e;
+  /* Franzos — dark flame grill (client gold / rose / plum) */
+  --fz-canvas: #120d14;
+  --fz-surface: #1c141c;
+  --fz-elevated: #2a1c28;
+  --fz-tomato: #a1435b;
+  --fz-mustard: #d5995b;
+  --fz-mustard-deep: #c5a86a;
+  --fz-outline: #704d6d;
+  --fz-cream: #1c141c;
+  --fz-sand: #3a2a38;
+  --fz-char: #f6e7c8;
+  --fz-smoke: #c5a86a;
+  --fz-white: #f6e7c8;
+  --fz-muted: #c5a86a;
+  --fz-leaf: #b05a65;
+  --fz-ember: #a1435b;
+  --fz-gold: #d5995b;
+  --fz-plum: #704d6d;
+  --fz-rose: #b05a65;
+  --fz-ink: #f6e7c8;
 
   /* Aliases kept for existing components */
-  --fz-flame: #c45a2c;
-  --fz-flame-deep: #9a3f1f;
+  --fz-flame: #a1435b;
+  --fz-flame-deep: #8a3550;
   --fz-bg: var(--fz-canvas);
-  --fz-fg: var(--fz-outline);
+  --fz-fg: var(--fz-ink);
   --fz-accent: var(--fz-tomato);
   --fz-accent-hover: var(--fz-flame-deep);
 
   --fz-font-display: "Mouse Memoirs", Impact, sans-serif;
   --fz-font-brand: "Modak", "Comic Sans MS", cursive;
-  --fz-font-body: "Mouse Memoirs", "Segoe UI", sans-serif;
+  --fz-font-body: "Segoe UI", system-ui, -apple-system, sans-serif;
 
   --fz-radius: 999px;
-  --fz-shadow: 4px 4px 0 var(--fz-outline);
+  --fz-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(112, 77, 109, 0.35);
 
   --fz-nav-offset: calc(env(safe-area-inset-top, 0px) + 6.5rem);
   --fz-nav-sticky: calc(env(safe-area-inset-top, 0px) + 4.75rem);

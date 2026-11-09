@@ -9,7 +9,7 @@ export function Sticker({
 }) {
   return (
     <span
-      className={`fz-sticker shadow-[0.35vw_0.35vw_0_var(--fz-outline)] max-md:shadow-[3px_3px_0_var(--fz-outline)] ${className}`}
+      className={`fz-sticker shadow-[0_10px_24px_rgba(0,0,0,0.45)] ${className}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
       {children}

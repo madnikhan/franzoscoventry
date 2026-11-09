@@ -34,14 +34,14 @@
         <a
             href="{{ route('menu') }}"
             data-cursor-hide
-            class="flex items-center justify-center rounded-full bg-[var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[var(--fz-canvas)] transition-all duration-300 hover:scale-105 hover:bg-[var(--fz-outline)] max-md:px-[5vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:px-[1.6vw] lg:py-[0.5vw] lg:text-[1.3vw]"
+            class="flex items-center justify-center rounded-full bg-[var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[#fff6ee] transition-all duration-300 hover:scale-105 hover:bg-[var(--fz-mustard)] hover:text-[#120d14] max-md:px-[5vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:px-[1.6vw] lg:py-[0.5vw] lg:text-[1.3vw]"
         >Menu</a>
 
         <a
             href="{{ route('order.checkout') }}"
             data-cursor-hide
             aria-label="{{ $navCartCount > 0 ? 'Cart, '.$navCartCount.' items' : 'Cart' }}"
-            class="relative flex items-center justify-center rounded-full border-2 border-[var(--fz-outline)] bg-[var(--fz-mustard)] px-3.5 py-2 text-[var(--fz-outline)] shadow-[2px_2px_0_var(--fz-outline)] transition-all duration-300 hover:scale-105 max-md:border-[0.4vw] max-md:px-[3.5vw] max-md:py-[1.6vw] lg:border-[0.15vw] lg:px-[1.2vw] lg:py-[0.45vw]"
+            class="relative flex items-center justify-center rounded-full border-2 border-[var(--fz-outline)] bg-[var(--fz-mustard)] px-3.5 py-2 text-[#120d14] shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105 max-md:border-[0.4vw] max-md:px-[3.5vw] max-md:py-[1.6vw] lg:border-[0.15vw] lg:px-[1.2vw] lg:py-[0.45vw]"
         >
             <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 fill-none stroke-current stroke-[2.2] lg:h-[1.45vw] lg:w-[1.45vw] lg:min-h-5 lg:min-w-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 5h1.6l1.3 9.2a1.6 1.6 0 0 0 1.6 1.3h8.2a1.6 1.6 0 0 0 1.6-1.3L19.5 8H7" />
@@ -63,16 +63,16 @@
                 :aria-expanded="open.toString()"
                 aria-controls="main-menu"
                 @click="open = !open"
-                class="flex cursor-pointer items-center gap-2 rounded-full border-2 border-[var(--fz-tomato)] bg-[var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[var(--fz-canvas)] transition-all duration-300 hover:scale-105 max-md:gap-[2vw] max-md:border-[0.4vw] max-md:px-[4vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:gap-[0.6vw] lg:border-[0.15vw] lg:px-[1.4vw] lg:py-[0.5vw] lg:text-[1.3vw]"
+                class="flex cursor-pointer items-center gap-2 rounded-full border-2 border-[var(--fz-rose)] bg-[var(--fz-tomato)] px-4 py-2 font-display text-sm uppercase tracking-wide text-[#fff6ee] transition-all duration-300 hover:scale-105 max-md:gap-[2vw] max-md:border-[0.4vw] max-md:px-[4vw] max-md:py-[1.8vw] max-md:text-[4vw] lg:gap-[0.6vw] lg:border-[0.15vw] lg:px-[1.4vw] lg:py-[0.5vw] lg:text-[1.3vw]"
             >
                 <template x-if="open">
                     <span class="inline-flex items-center gap-[0.5vw]">Close <span aria-hidden class="text-[1.2em] leading-none">×</span></span>
                 </template>
                 <template x-if="!open">
                     <span aria-hidden class="inline-flex h-4 w-5 flex-col justify-center gap-1 lg:h-[1.2vw] lg:min-h-[1.1rem] lg:w-[1.6vw] lg:min-w-[1.25rem] lg:gap-[0.28vw]">
-                        <span class="block h-0.5 w-full rounded-full bg-[var(--fz-canvas)] lg:h-[0.22vw] lg:min-h-[2px]"></span>
-                        <span class="block h-0.5 w-full rounded-full bg-[var(--fz-canvas)] lg:h-[0.22vw] lg:min-h-[2px]"></span>
-                        <span class="block h-0.5 w-full rounded-full bg-[var(--fz-canvas)] lg:h-[0.22vw] lg:min-h-[2px]"></span>
+                        <span class="block h-0.5 w-full rounded-full bg-[#fff6ee] lg:h-[0.22vw] lg:min-h-[2px]"></span>
+                        <span class="block h-0.5 w-full rounded-full bg-[#fff6ee] lg:h-[0.22vw] lg:min-h-[2px]"></span>
+                        <span class="block h-0.5 w-full rounded-full bg-[#fff6ee] lg:h-[0.22vw] lg:min-h-[2px]"></span>
                     </span>
                 </template>
             </button>
@@ -88,19 +88,19 @@
                 x-transition:leave="transition ease-in duration-150"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-90"
-                class="absolute top-[calc(100%+0.75rem)] right-0 w-[min(22rem,calc(100vw-1.5rem))] origin-top-right rounded-2xl bg-[var(--fz-tomato)] p-5 shadow-[0_12px_32px_rgba(27,27,27,.25)] max-md:mt-[5vw] max-md:rounded-[4vw] max-md:p-[6vw] lg:top-[calc(100%+1vw)] lg:w-[min(18vw,22rem)] lg:rounded-[1.2vw] lg:p-[2vw] lg:shadow-[0_1vw_3vw_rgba(27,27,27,.25)]"
+                class="absolute top-[calc(100%+0.75rem)] right-0 w-[min(22rem,calc(100vw-1.5rem))] origin-top-right rounded-2xl border border-[var(--fz-outline)] bg-[var(--fz-elevated)] p-5 shadow-[0_16px_48px_rgba(0,0,0,.55)] max-md:mt-[5vw] max-md:rounded-[4vw] max-md:p-[6vw] lg:top-[calc(100%+1vw)] lg:w-[min(18vw,22rem)] lg:rounded-[1.2vw] lg:p-[2vw]"
                 @click.outside="open = false"
             >
                 <ul class="flex flex-col gap-3 max-md:gap-[4vw] lg:gap-[1.2vw]">
-                    <li><a role="menuitem" href="{{ route('home') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Home</a></li>
-                    <li><a role="menuitem" href="{{ route('about') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">About</a></li>
-                    <li><a role="menuitem" href="{{ route('menu') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Menu</a></li>
-                    <li><a role="menuitem" href="{{ route('opening-hours') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Hours</a></li>
-                    <li><a role="menuitem" href="{{ route('contact') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Contact</a></li>
-                    <li><a role="menuitem" href="{{ route('order.checkout') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Order{{ $navCartCount > 0 ? ' / Cart ('.$navCartCount.')' : ' / Cart' }}</a></li>
-                    <li><a role="menuitem" href="{{ route('track.index') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-canvas)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Track</a></li>
+                    <li><a role="menuitem" href="{{ route('home') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Home</a></li>
+                    <li><a role="menuitem" href="{{ route('about') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">About</a></li>
+                    <li><a role="menuitem" href="{{ route('menu') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Menu</a></li>
+                    <li><a role="menuitem" href="{{ route('opening-hours') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Hours</a></li>
+                    <li><a role="menuitem" href="{{ route('contact') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Contact</a></li>
+                    <li><a role="menuitem" href="{{ route('order.checkout') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Order{{ $navCartCount > 0 ? ' / Cart ('.$navCartCount.')' : ' / Cart' }}</a></li>
+                    <li><a role="menuitem" href="{{ route('track.index') }}" class="block font-display text-base uppercase tracking-wide text-[var(--fz-ink)] hover:text-[var(--fz-mustard)] max-md:text-[7vw] lg:text-[1.6vw]">Track</a></li>
                 </ul>
-                <p class="mt-4 border-t border-white/30 pt-3 text-xs font-semibold uppercase tracking-wider text-[var(--fz-canvas)]/80 max-md:mt-[5vw] max-md:pt-[4vw] max-md:text-[3.2vw] lg:mt-[2vw] lg:pt-[1.2vw] lg:text-[0.85vw]">
+                <p class="mt-4 border-t border-[var(--fz-outline)]/50 pt-3 text-xs font-semibold uppercase tracking-wider text-[var(--fz-muted)] max-md:mt-[5vw] max-md:pt-[4vw] max-md:text-[3.2vw] lg:mt-[2vw] lg:pt-[1.2vw] lg:text-[0.85vw]">
                     Est. Coventry — Corporation Street
                 </p>
             </div>
