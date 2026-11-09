@@ -1,0 +1,17 @@
+{
+  "name": "@franzos/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./types/index.js",
+  "exports": {
+    "./brand/tokens.css": "./brand/tokens.css",
+    "./brand/copy.json": "./brand/copy.json",
+    "./config/business.json": "./config/business.json",
+    "./menu/seed.json": "./menu/seed.json",
+    "./schema/domain.json": "./schema/domain.json",
+    "./parity/features.json": "./parity/features.json",
+    "./types": "./types/index.ts",
+    "./media/*": "./media/*"
+  }
+}

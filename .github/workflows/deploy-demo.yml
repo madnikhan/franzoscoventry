@@ -1,0 +1,21 @@
+name: Deploy demo (Vercel)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/demo-next/**"
+      - "packages/shared/**"
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reminder
+        run: |
+          echo "Connect this repo to Vercel with Root Directory = apps/demo-next"
+          echo "Build Command: npm run build"
+          echo "Install Command: npm install"
+          echo "Set env: DATABASE_URL (optional), SUMUP_API_KEY (optional sandbox), NEXT_PUBLIC_APP_URL"

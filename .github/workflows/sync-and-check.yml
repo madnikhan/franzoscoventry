@@ -1,0 +1,36 @@
+name: Sync and parity check
+
+on:
+  push:
+    paths:
+      - "packages/shared/**"
+      - "apps/demo-next/**"
+      - "packages/sync/**"
+      - "scripts/**"
+  pull_request:
+    paths:
+      - "packages/shared/**"
+      - "apps/demo-next/**"
+      - "packages/sync/**"
+      - "scripts/**"
+
+jobs:
+  sync-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Sync shared → apps
+        run: node scripts/sync-all.mjs
+      - name: Parity check
+        run: node scripts/check-parity.mjs
+      - name: Fail if sync left dirty tree
+        run: |
+          git add -N apps/production-laravel apps/demo-next packages/shared/SYNC_VERSION.json parity-report.md || true
+          if ! git diff --quiet; then
+            echo "Working tree dirty after sync — commit synced artifacts"
+            git status --short
+            exit 1
+          fi

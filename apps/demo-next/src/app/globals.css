@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --color-background: var(--fz-bg);
+  --color-foreground: var(--fz-fg);
+  --color-fz-flame: var(--fz-flame);
+  --color-fz-cream: var(--fz-cream);
+  --color-fz-char: var(--fz-char);
+  --color-fz-sand: var(--fz-sand);
+  --color-fz-muted: var(--fz-muted);
+  --color-fz-mustard: var(--fz-mustard);
+  --color-fz-tomato: var(--fz-tomato);
+  --color-fz-outline: var(--fz-outline);
+  --font-display: var(--font-mouse), var(--fz-font-display);
+  --font-brand: var(--font-modak), var(--fz-font-brand);
+  --font-sans: var(--font-mouse), var(--fz-font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--fz-canvas);
+  color: var(--fz-outline);
+  font-family: var(--font-mouse), var(--fz-font-body);
+  letter-spacing: 0.02em;
+}
+
+.font-display {
+  font-family: var(--font-mouse), var(--fz-font-display);
+  letter-spacing: 0.04em;
+}
+
+.font-brand {
+  font-family: var(--font-modak), var(--fz-font-brand);
+  line-height: 0.9;
+}
+
+.fz-outline-text {
+  color: var(--fz-tomato);
+  -webkit-text-stroke: 2px var(--fz-white);
+  paint-order: stroke fill;
+  text-shadow: 3px 3px 0 var(--fz-outline);
+}
+
+.fz-card {
+  border-radius: 1.25rem;
+  background: var(--fz-white);
+  box-shadow: var(--fz-shadow);
+  border: 3px solid var(--fz-outline);
+}
+
+.fz-btn {
+  @apply inline-flex items-center justify-center px-5 py-2 font-semibold transition;
+  border-radius: 999px;
+  border: 3px solid var(--fz-outline);
+  box-shadow: 3px 3px 0 var(--fz-outline);
+}
+
+.fz-btn-primary {
+  background: var(--fz-tomato);
+  color: white;
+}
+
+.fz-btn-primary:hover {
+  background: var(--fz-flame-deep);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--fz-outline);
+}
+
+.fz-sticker {
+  display: inline-block;
+  background: var(--fz-mustard);
+  color: var(--fz-outline);
+  border: 3px solid var(--fz-outline);
+  border-radius: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  font-weight: 700;
+  box-shadow: 3px 3px 0 var(--fz-outline);
+  text-transform: uppercase;
+}
+
+.fz-wave {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  color: inherit;
+}
+
+.marketing-main {
+  max-width: none;
+  width: 100%;
+}
+
+html.fz-custom-cursor,
+html.fz-custom-cursor body {
+  cursor: none;
+}
+
+html.fz-custom-cursor a,
+html.fz-custom-cursor button,
+html.fz-custom-cursor [data-cursor-hide],
+html.fz-custom-cursor input,
+html.fz-custom-cursor select,
+html.fz-custom-cursor textarea,
+html.fz-custom-cursor label {
+  cursor: pointer;
+}

@@ -1,0 +1,33 @@
+:root {
+  /* Franzos — placemat mosaic palette (cream, terracotta, mustard, plum) */
+  --fz-canvas: #f0e6c8;
+  --fz-tomato: #c45a2c;
+  --fz-mustard: #e0a83a;
+  --fz-mustard-deep: #d18d44;
+  --fz-outline: #4a2f48;
+  --fz-cream: #f0e6c8;
+  --fz-sand: #d4c4a0;
+  --fz-char: #1b1b1b;
+  --fz-smoke: #4a2f48;
+  --fz-white: #ffffff;
+  --fz-muted: #6b4a3a;
+  --fz-leaf: #57725f;
+  --fz-ember: #c45a2c;
+  --fz-gold: #e0a83a;
+  --fz-plum: #6b3a6e;
+
+  /* Aliases kept for existing components */
+  --fz-flame: #c45a2c;
+  --fz-flame-deep: #9a3f1f;
+  --fz-bg: var(--fz-canvas);
+  --fz-fg: var(--fz-outline);
+  --fz-accent: var(--fz-tomato);
+  --fz-accent-hover: var(--fz-flame-deep);
+
+  --fz-font-display: "Mouse Memoirs", Impact, sans-serif;
+  --fz-font-brand: "Modak", "Comic Sans MS", cursive;
+  --fz-font-body: "Mouse Memoirs", "Segoe UI", sans-serif;
+
+  --fz-radius: 999px;
+  --fz-shadow: 4px 4px 0 var(--fz-outline);
+}

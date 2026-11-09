@@ -1,0 +1,33 @@
+node_modules/
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+.idea/
+.vscode/
+
+# Next
+apps/demo-next/.next/
+apps/demo-next/.data/
+apps/demo-next/node_modules/
+# Synced from packages/shared/media via `npm run sync` / postinstall
+apps/demo-next/public/media/
+
+# Laravel
+apps/production-laravel/vendor/
+apps/production-laravel/node_modules/
+apps/production-laravel/public/build/
+apps/production-laravel/public/hot
+apps/production-laravel/public/media/
+apps/production-laravel/storage/logs/*
+apps/production-laravel/storage/framework/cache/*
+apps/production-laravel/storage/framework/sessions/*
+apps/production-laravel/storage/framework/views/*
+apps/production-laravel/database/database.sqlite
+!apps/production-laravel/storage/app/shared/.gitkeep
+
+# Sync noise optional
+# parity-report.md is committed as CI artifact snapshot
+__pycache__/
+*.pyc

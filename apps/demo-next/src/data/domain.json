@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "roles": ["customer", "driver", "kitchen", "till", "admin"],
+  "orderTypes": ["DELIVERY", "COLLECTION", "TAKEAWAY"],
+  "orderStatuses": [
+    "PENDING",
+    "CONFIRMED",
+    "PREPARING",
+    "READY_FOR_PICKUP",
+    "OUT_FOR_DELIVERY",
+    "DELIVERED",
+    "CANCELLED"
+  ],
+  "paymentStatuses": ["PENDING", "COMPLETED", "FAILED", "REFUNDED"],
+  "paymentMethods": ["card", "cash", "sumup"],
+  "statusFlow": {
+    "PENDING": ["CONFIRMED", "CANCELLED"],
+    "CONFIRMED": ["PREPARING", "CANCELLED"],
+    "PREPARING": ["READY_FOR_PICKUP", "CANCELLED"],
+    "READY_FOR_PICKUP": ["OUT_FOR_DELIVERY", "DELIVERED"],
+    "OUT_FOR_DELIVERY": ["DELIVERED", "CANCELLED"],
+    "DELIVERED": [],
+    "CANCELLED": []
+  },
+  "entities": {
+    "Category": ["id", "name", "slug", "sortOrder", "isActive"],
+    "MenuItem": ["id", "categoryId", "name", "slug", "description", "price", "image", "isAvailable", "spiceSelectable"],
+    "Customization": ["id", "menuItemId", "name", "required", "maxChoices"],
+    "CustomizationChoice": ["id", "customizationId", "name", "priceDelta"],
+    "Order": ["id", "orderNumber", "type", "status", "paymentStatus", "customerName", "customerPhone", "customerEmail", "address", "subtotal", "deliveryFee", "vat", "total", "driverId", "notes"],
+    "OrderItem": ["id", "orderId", "name", "quantity", "unitPrice", "customizations"],
+    "Driver": ["id", "userId", "phone", "isAvailable", "lat", "lng"],
+    "Payment": ["id", "orderId", "provider", "method", "amount", "status", "externalId"]
+  }
+}

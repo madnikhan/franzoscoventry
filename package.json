@@ -1,0 +1,22 @@
+{
+  "name": "franzos-coventry",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Franzos Coventry dual-stack: Next.js demo (Vercel) + Laravel production (IONOS)",
+  "workspaces": [
+    "apps/demo-next",
+    "packages/shared",
+    "packages/sync"
+  ],
+  "scripts": {
+    "sync": "node scripts/sync-all.mjs",
+    "sync:check": "node scripts/check-parity.mjs",
+    "dev:demo": "npm run dev --workspace=apps/demo-next",
+    "build:demo": "npm run build --workspace=apps/demo-next",
+    "postinstall": "node scripts/sync-all.mjs || true",
+    "prepare": "git config core.hooksPath scripts/githooks 2>/dev/null || true"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

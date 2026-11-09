@@ -1,0 +1,932 @@
+{
+  "spiceLevels": [
+    {
+      "id": "mild",
+      "name": "Mild",
+      "priceDelta": 0
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "priceDelta": 0
+    },
+    {
+      "id": "hot",
+      "name": "Hot",
+      "priceDelta": 0
+    },
+    {
+      "id": "extra-hot",
+      "name": "Extra Hot",
+      "priceDelta": 0
+    }
+  ],
+  "categories": [
+    {
+      "id": "salads",
+      "name": "Fresh Salads",
+      "slug": "fresh-salads",
+      "sortOrder": 1,
+      "items": [
+        {
+          "id": "mix-salad",
+          "name": "Mix Salad",
+          "slug": "mix-salad",
+          "description": "Mixed greens with vegetables and dressing.",
+          "price": 6.7,
+          "isAvailable": true
+        },
+        {
+          "id": "chicken-strips-salad",
+          "name": "Chicken Strips Salad",
+          "slug": "chicken-strips-salad",
+          "description": "Grilled chicken strips with mixed greens.",
+          "price": 8.45,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/grilled-chicken/full.png"
+        }
+      ]
+    },
+    {
+      "id": "appetisers",
+      "name": "Appetisers",
+      "slug": "appetisers",
+      "sortOrder": 2,
+      "items": [
+        {
+          "id": "olives",
+          "name": "Olives",
+          "slug": "olives",
+          "description": "Green olives dressed in herbs.",
+          "price": 4.95,
+          "isAvailable": true
+        },
+        {
+          "id": "halloumi-2",
+          "name": "Halloumi Cheese (2 Slices)",
+          "slug": "halloumi-2",
+          "description": "Grilled halloumi cheese slices.",
+          "price": 2.95,
+          "isAvailable": true
+        },
+        {
+          "id": "halloumi-5",
+          "name": "Halloumi Cheese (5 Slices)",
+          "slug": "halloumi-5",
+          "description": "Halloumi cheese slices, grilled or fried.",
+          "price": 6.25,
+          "isAvailable": true
+        },
+        {
+          "id": "garlic-bread",
+          "name": "Garlic Bread (4 Slices)",
+          "slug": "garlic-bread",
+          "description": "Bread slices with garlic butter.",
+          "price": 4.95,
+          "isAvailable": true,
+          "image": "/media/dishes/jalapeno-garlic-bread/full.png"
+        },
+        {
+          "id": "hummus-pitta",
+          "name": "Hummus With Toasted Pitta",
+          "slug": "hummus-pitta",
+          "description": "Chickpea paste with tahini, served with toasted pitta.",
+          "price": 4.95,
+          "isAvailable": true,
+          "image": "/media/dishes/hummus/full.png"
+        },
+        {
+          "id": "lamb-chops",
+          "name": "4 Succulent Lamb Chops",
+          "slug": "lamb-chops",
+          "description": "Grilled lamb chops marinated in Franzos special mix.",
+          "price": 14.5,
+          "isAvailable": true,
+          "image": "/media/menu/lamb-chops.jpg"
+        }
+      ]
+    },
+    {
+      "id": "piri-piri",
+      "name": "Piri Piri Chicken",
+      "slug": "piri-piri-chicken",
+      "sortOrder": 3,
+      "items": [
+        {
+          "id": "quarter-chicken",
+          "name": "Quarter Chicken",
+          "slug": "quarter-chicken",
+          "description": "Grilled chicken marinated in Franzos special mix. On the bone with your spice.",
+          "price": 6.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/peri-peri-chicken/full.png"
+        },
+        {
+          "id": "half-chicken",
+          "name": "Half Grilled Chicken",
+          "slug": "half-chicken",
+          "description": "\u00bd grilled chicken marinated in Franzos special mix.",
+          "price": 8.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/piri-piri-chicken/full.png"
+        },
+        {
+          "id": "whole-chicken",
+          "name": "Whole Grilled Chicken",
+          "slug": "whole-chicken",
+          "description": "Whole chicken marinated in Franzos special mix.",
+          "price": 13.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/menu/whole-chicken.jpg"
+        },
+        {
+          "id": "strips-3",
+          "name": "3 Chicken Strips",
+          "slug": "strips-3",
+          "description": "Chicken strips with your choice of spice.",
+          "price": 4.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/chicken-delight-fries/full.png"
+        },
+        {
+          "id": "strips-6",
+          "name": "6 Chicken Strips",
+          "slug": "strips-6",
+          "description": "Chicken strips with your choice of spice.",
+          "price": 7.9,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/chicken-delight-fries/full.png"
+        },
+        {
+          "id": "wings-3",
+          "name": "3 Chicken Wings",
+          "slug": "wings-3",
+          "description": "Grilled wings marinated in Franzos special mix.",
+          "price": 4.25,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/flame-grilled-wings/full.png"
+        },
+        {
+          "id": "wings-6",
+          "name": "6 Chicken Wings",
+          "slug": "wings-6",
+          "description": "Grilled wings marinated in Franzos special mix.",
+          "price": 6.75,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/peri-peri-wings/full.png"
+        },
+        {
+          "id": "wings-12",
+          "name": "12 Chicken Wings",
+          "slug": "wings-12",
+          "description": "Grilled wings marinated in Franzos special mix.",
+          "price": 12.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/piri-piri-chicken-wings/full.png"
+        },
+        {
+          "id": "chicken-steak",
+          "name": "Chicken Steak",
+          "slug": "chicken-steak",
+          "description": "2 pieces of chicken steak with your piri piri sauce.",
+          "price": 8.45,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/grilled-chicken/full.png"
+        },
+        {
+          "id": "boneless-thigh",
+          "name": "Boneless Chicken Thigh",
+          "slug": "boneless-thigh",
+          "description": "Chicken thighs marinated and grilled.",
+          "price": 7.45,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/roast-chicken/full.png"
+        },
+        {
+          "id": "sizzling-butterfly",
+          "name": "Sizzling Chicken Butterfly",
+          "slug": "sizzling-butterfly",
+          "description": "Sizzling butterflied chicken.",
+          "price": 7.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/grilled-chicken/full.png"
+        },
+        {
+          "id": "rice-strips",
+          "name": "Rice With Strips",
+          "slug": "rice-strips",
+          "description": "Lightly spiced rice with chicken strips.",
+          "price": 9.85,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/loaded-fries/full.png"
+        }
+      ]
+    },
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "slug": "burgers",
+      "sortOrder": 4,
+      "items": [
+        {
+          "id": "piri-burger",
+          "name": "Piri Piri Chicken Burger",
+          "slug": "piri-burger",
+          "description": "Grilled chicken breast, piri sauce, lettuce, onions, mayo in a toasted bap.",
+          "price": 7.9,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/menu/piri-burger.jpg"
+        },
+        {
+          "id": "tikka-burger",
+          "name": "Chicken Tikka Burger",
+          "slug": "tikka-burger",
+          "description": "Grilled chicken tikka, lettuce, onions, mayo, chilli sauce.",
+          "price": 7.9,
+          "isAvailable": true,
+          "image": "/media/dishes/chicken-burger/full.png"
+        },
+        {
+          "id": "bravo-burger",
+          "name": "Bravo Burger",
+          "slug": "bravo-burger",
+          "description": "Grilled chicken thigh, cheese, Franzos mayo, chilli jam in brioche. +15 mins.",
+          "price": 8.95,
+          "isAvailable": true,
+          "image": "/media/dishes/weekend-burgers/full.png"
+        },
+        {
+          "id": "lamb-smash",
+          "name": "Lamb Smashed Burger",
+          "slug": "lamb-smash",
+          "description": "Minced lamb patty with lettuce, onions, tomato, cheese, chilli sauce, mayo.",
+          "price": 9.45,
+          "isAvailable": true,
+          "image": "/media/dishes/smash-burger/full.png"
+        },
+        {
+          "id": "beef-smash",
+          "name": "Beef Smashed Burger",
+          "slug": "beef-smash",
+          "description": "6oz beef patty with onions, gherkins, cheese, Franzos mayo in brioche.",
+          "price": 9.45,
+          "isAvailable": true,
+          "image": "/media/menu/smash-burger.jpg"
+        },
+        {
+          "id": "chicken-smash",
+          "name": "Chicken Smashed Burger",
+          "slug": "chicken-smash",
+          "description": "Minced chicken patty with lettuce, onions, cheese, chilli sauce, mayo.",
+          "price": 9.45,
+          "isAvailable": true,
+          "image": "/media/dishes/smash-burgers/full.png"
+        },
+        {
+          "id": "piri-pitta",
+          "name": "Piri Piri Chicken In Pitta",
+          "slug": "piri-pitta",
+          "description": "Grilled chicken breast with piri sauce in toasted pitta.",
+          "price": 7.9,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/lebanese-chicken-pitta/full.png"
+        },
+        {
+          "id": "tikka-pitta",
+          "name": "Chicken Tikka In Pitta",
+          "slug": "tikka-pitta",
+          "description": "Grilled chicken tikka in toasted pitta.",
+          "price": 7.9,
+          "isAvailable": true,
+          "image": "/media/dishes/lebanese-chicken-pitta/full.png"
+        },
+        {
+          "id": "lebanese-pitta",
+          "name": "Lebanese Chicken In Pitta",
+          "slug": "lebanese-pitta",
+          "description": "Lebanese grilled chicken with garlic sauce in pitta. +15 mins.",
+          "price": 7.9,
+          "isAvailable": true,
+          "image": "/media/dishes/lebanese-chicken-pitta/full.png"
+        }
+      ]
+    },
+    {
+      "id": "wraps",
+      "name": "Wraps",
+      "slug": "wraps",
+      "sortOrder": 5,
+      "items": [
+        {
+          "id": "tikka-wrap",
+          "name": "Chicken Tikka Wrap",
+          "slug": "tikka-wrap",
+          "description": "Chicken tikka in toasted tortilla.",
+          "price": 7.9,
+          "isAvailable": true,
+          "image": "/media/dishes/chicken-wrap/full.png"
+        },
+        {
+          "id": "lamb-kebab-wrap",
+          "name": "Lamb Kebab Wrap",
+          "slug": "lamb-kebab-wrap",
+          "description": "2 grilled lamb kebabs in tortilla.",
+          "price": 7.75,
+          "isAvailable": true,
+          "image": "/media/menu/lamb-kebab-wrap.jpg"
+        },
+        {
+          "id": "chicken-kebab-wrap",
+          "name": "Chicken Kebab Wrap",
+          "slug": "chicken-kebab-wrap",
+          "description": "2 grilled chicken kebabs in tortilla.",
+          "price": 7.75,
+          "isAvailable": true,
+          "image": "/media/menu/lebanese-chicken-wrap.jpg"
+        },
+        {
+          "id": "piri-wrap",
+          "name": "Piri Piri Chicken Wrap",
+          "slug": "piri-wrap",
+          "description": "Piri chicken breast in grilled tortilla.",
+          "price": 7.75,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/menu/shawarma-wrap.jpg"
+        }
+      ]
+    },
+    {
+      "id": "vegination",
+      "name": "Vegination",
+      "slug": "vegination",
+      "sortOrder": 6,
+      "items": [
+        {
+          "id": "veg-bun",
+          "name": "Veg Or Bean In Bun",
+          "slug": "veg-bun",
+          "description": "Veg or bean patty with salad and mayo in seeded bun.",
+          "price": 7.25,
+          "isAvailable": true,
+          "image": "/media/dishes/veggie-burgers/full.png"
+        },
+        {
+          "id": "veg-wrap",
+          "name": "Veg Or Bean In Wrap",
+          "slug": "veg-wrap",
+          "description": "Veg or bean patty in grilled tortilla.",
+          "price": 7.25,
+          "isAvailable": true,
+          "image": "/media/dishes/veggie-burgers/full.png"
+        },
+        {
+          "id": "veg-pitta",
+          "name": "Veg Or Bean In Pitta",
+          "slug": "veg-pitta",
+          "description": "Veg or bean patty in toasted pitta.",
+          "price": 7.25,
+          "isAvailable": true,
+          "image": "/media/dishes/veggie-burgers/full.png"
+        }
+      ]
+    },
+    {
+      "id": "boxes",
+      "name": "Box Meals",
+      "slug": "box-meals",
+      "sortOrder": 7,
+      "items": [
+        {
+          "id": "loaded-box",
+          "name": "Loaded Box",
+          "slug": "loaded-box",
+          "description": "Piri burger, 3 grilled wings, regular fries.",
+          "price": 11.5,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/loaded-fries/full.png"
+        },
+        {
+          "id": "munch-box",
+          "name": "Munch Box",
+          "slug": "munch-box",
+          "description": "\u00bc grilled chicken, 3 grilled wings, regular fries.",
+          "price": 11.5,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/burger-fries-drink/full.png"
+        }
+      ]
+    },
+    {
+      "id": "platters",
+      "name": "Franzos Platters",
+      "slug": "platters",
+      "sortOrder": 8,
+      "items": [
+        {
+          "id": "single-platter",
+          "name": "Single Platter",
+          "slug": "single-platter",
+          "description": "Whole grilled chicken quartered, 2 large sides.",
+          "price": 22.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/lamb-chops-platter/full.png"
+        },
+        {
+          "id": "mix-platter",
+          "name": "Mix Platter",
+          "slug": "mix-platter",
+          "description": "Whole chicken quartered, 10 wings, 2 large sides.",
+          "price": 29.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/menu/chicken-delight-platter.jpg"
+        },
+        {
+          "id": "mega-platter",
+          "name": "Mega Platter",
+          "slug": "mega-platter",
+          "description": "2 whole chickens, 20 wings, 3 large sides.",
+          "price": 57.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/lamb-chops-platter/full.png"
+        },
+        {
+          "id": "strips-platter",
+          "name": "Strips Platter",
+          "slug": "strips-platter",
+          "description": "Chicken strips with vegetables.",
+          "price": 27.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/chicken-delight-fries/full.png"
+        },
+        {
+          "id": "franzos-special",
+          "name": "Franzos Special",
+          "slug": "franzos-special",
+          "description": "2 burgers, \u00bd chicken, 4 wings, 2 regular fries.",
+          "price": 33.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/dishes/piri-piri-chicken/full.png"
+        },
+        {
+          "id": "wings-platter",
+          "name": "Wings Platter",
+          "slug": "wings-platter",
+          "description": "Chicken wings with various sauces.",
+          "price": 26.95,
+          "isAvailable": true,
+          "spiceSelectable": true,
+          "image": "/media/menu/wings.jpg"
+        },
+        {
+          "id": "franzos-xl",
+          "name": "Franzos XL",
+          "slug": "franzos-xl",
+          "description": "4 grilled burgers, 8 wings, 2 regular fries.",
+          "price": 39.95,
+          "isAvailable": true,
+          "image": "/media/dishes/piri-piri-chicken/full.png"
+        },
+        {
+          "id": "franzos-xxl",
+          "name": "Franzos XXL",
+          "slug": "franzos-xxl",
+          "description": "Loaded fries with minced meat, vegetables and spices.",
+          "price": 59.95,
+          "isAvailable": true,
+          "image": "/media/menu/chicken-delight-platter.jpg"
+        }
+      ]
+    },
+    {
+      "id": "kids",
+      "name": "Kids Meals",
+      "slug": "kids-meals",
+      "sortOrder": 9,
+      "items": [
+        {
+          "id": "kids-wings",
+          "name": "Kids Meal - Wings",
+          "slug": "kids-wings",
+          "description": "Wings with honey mustard, fries and drink.",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "/media/dishes/grilled-wings/full.png"
+        },
+        {
+          "id": "kids-strips",
+          "name": "Kids Meal - Strips",
+          "slug": "kids-strips",
+          "description": "Chicken strips, fries and a drink.",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "/media/dishes/chicken-delight-fries/full.png"
+        },
+        {
+          "id": "kids-piri",
+          "name": "Kids Meal - Piri Burger",
+          "slug": "kids-piri",
+          "description": "Piri chicken burger with fries and drink.",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "/media/dishes/chicken-burger/full.png"
+        },
+        {
+          "id": "kids-cheese",
+          "name": "Kids Meal - Cheese Burger",
+          "slug": "kids-cheese",
+          "description": "Beef cheese burger with fries and drink.",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "/media/dishes/double-cheeseburger/full.png"
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "slug": "sides",
+      "sortOrder": 10,
+      "items": [
+        {
+          "id": "fries",
+          "name": "Fries",
+          "slug": "fries",
+          "description": "Regular fries.",
+          "price": 2.75,
+          "isAvailable": true,
+          "image": "/media/dishes/curly-fries/full.png"
+        },
+        {
+          "id": "piri-fries",
+          "name": "Piri Fries",
+          "slug": "piri-fries",
+          "description": "Fries tossed in piri seasoning.",
+          "price": 2.95,
+          "isAvailable": true,
+          "image": "/media/dishes/loaded-fries/full.png"
+        },
+        {
+          "id": "corn",
+          "name": "Corn On The Cob",
+          "slug": "corn",
+          "description": "Grilled corn on the cob.",
+          "price": 3.55,
+          "isAvailable": true
+        },
+        {
+          "id": "side-salad",
+          "name": "Mix Salad",
+          "slug": "side-salad",
+          "description": "Side salad.",
+          "price": 3.9,
+          "isAvailable": true
+        },
+        {
+          "id": "rice",
+          "name": "Rice",
+          "slug": "rice",
+          "description": "Lightly spiced rice.",
+          "price": 3.55,
+          "isAvailable": true
+        },
+        {
+          "id": "side-garlic",
+          "name": "Garlic Bread",
+          "slug": "side-garlic",
+          "description": "Garlic bread portion.",
+          "price": 2.75,
+          "isAvailable": true,
+          "image": "/media/dishes/jalapeno-garlic-bread/full.png"
+        },
+        {
+          "id": "wedges",
+          "name": "Potato Wedges",
+          "slug": "wedges",
+          "description": "Seasoned potato wedges.",
+          "price": 3.55,
+          "isAvailable": true,
+          "image": "/media/dishes/sweet-potato-fries/full.png"
+        },
+        {
+          "id": "mash",
+          "name": "Mash Potato",
+          "slug": "mash",
+          "description": "Creamy mash.",
+          "price": 3.55,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "slug": "drinks",
+      "sortOrder": 11,
+      "items": [
+        {
+          "id": "coke",
+          "name": "Coke",
+          "slug": "coke",
+          "description": "Coca-Cola.",
+          "price": 1.95,
+          "isAvailable": true
+        },
+        {
+          "id": "diet-coke",
+          "name": "Diet Coke",
+          "slug": "diet-coke",
+          "description": "Diet Coke.",
+          "price": 1.95,
+          "isAvailable": true
+        },
+        {
+          "id": "fanta",
+          "name": "Fanta Orange",
+          "slug": "fanta",
+          "description": "Orange soda.",
+          "price": 1.95,
+          "isAvailable": true
+        },
+        {
+          "id": "sprite",
+          "name": "Sprite",
+          "slug": "sprite",
+          "description": "Lemon-lime soda.",
+          "price": 1.95,
+          "isAvailable": true
+        },
+        {
+          "id": "mirinda",
+          "name": "Mirinda Strawberry",
+          "slug": "mirinda",
+          "description": "Strawberry soda.",
+          "price": 1.95,
+          "isAvailable": true
+        },
+        {
+          "id": "capri-sun",
+          "name": "Capri Sun Orange",
+          "slug": "capri-sun",
+          "description": "Orange juice drink.",
+          "price": 1.95,
+          "isAvailable": true
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "slug": "water",
+          "description": "Bottled water.",
+          "price": 1.95,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktails",
+      "slug": "mocktails",
+      "sortOrder": 12,
+      "items": [
+        {
+          "id": "classic-mojito",
+          "name": "Classic Mojito",
+          "slug": "classic-mojito",
+          "description": "Fresh mint and lime.",
+          "price": 5.95,
+          "isAvailable": true
+        },
+        {
+          "id": "strawberry-mocktail",
+          "name": "Strawberry Mocktail",
+          "slug": "strawberry-mocktail",
+          "description": "Strawberry, lime, soda.",
+          "price": 5.95,
+          "isAvailable": true
+        },
+        {
+          "id": "bahama",
+          "name": "Bahama Mama",
+          "slug": "bahama",
+          "description": "Coconut, pineapple, pomegranate, lime and orange.",
+          "price": 5.95,
+          "isAvailable": true
+        },
+        {
+          "id": "blue-energy",
+          "name": "Blue Energy",
+          "slug": "blue-energy",
+          "description": "Guarana, strawberry and banana. Contains caffeine.",
+          "price": 5.95,
+          "isAvailable": true
+        },
+        {
+          "id": "party-beach",
+          "name": "Party On The Beach",
+          "slug": "party-beach",
+          "description": "Orange, cranberry and peach.",
+          "price": 5.95,
+          "isAvailable": true
+        },
+        {
+          "id": "watermelon-mojito",
+          "name": "Watermelon Mojito",
+          "slug": "watermelon-mojito",
+          "description": "Classic mojito with watermelon.",
+          "price": 5.95,
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Thick Milkshakes",
+      "slug": "milkshakes",
+      "sortOrder": 13,
+      "items": [
+        {
+          "id": "rocher-shake",
+          "name": "Rocher My Ferrero",
+          "slug": "rocher-shake",
+          "description": "Ferrero Rocher, ice cream and milk.",
+          "price": 6.0,
+          "isAvailable": true,
+          "image": "/media/dishes/chocolate-shake/full.png"
+        },
+        {
+          "id": "oreo-shake",
+          "name": "Simply Oreo",
+          "slug": "oreo-shake",
+          "description": "Oreo cookie blended with ice cream and milk.",
+          "price": 6.0,
+          "isAvailable": true,
+          "image": "/media/menu/chocolate-shake.jpg"
+        },
+        {
+          "id": "pb-shake",
+          "name": "Love Peanut Butter",
+          "slug": "pb-shake",
+          "description": "Peanut butter, ice cream and milk.",
+          "price": 6.0,
+          "isAvailable": true,
+          "image": "/media/menu/chocolate-shake-loaded.jpg"
+        },
+        {
+          "id": "bueno-white",
+          "name": "Kinder Bueno White",
+          "slug": "bueno-white",
+          "description": "White Kinder Bueno shake.",
+          "price": 6.0,
+          "isAvailable": true,
+          "image": "/media/dishes/chocolate-shake/full.png"
+        },
+        {
+          "id": "bueno-milk",
+          "name": "Kinder Bueno Milk",
+          "slug": "bueno-milk",
+          "description": "Milk chocolate Kinder Bueno shake.",
+          "price": 6.0,
+          "isAvailable": true,
+          "image": "/media/menu/chocolate-shake.jpg"
+        },
+        {
+          "id": "mango-mania",
+          "name": "Mango Mania",
+          "slug": "mango-mania",
+          "description": "Mango blended with milk and ice cream.",
+          "price": 6.0,
+          "isAvailable": true,
+          "image": "/media/dishes/chocolate-shake/full.png"
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "slug": "desserts",
+      "sortOrder": 14,
+      "items": [
+        {
+          "id": "oreo-dough",
+          "name": "Oreo Cookie Dough",
+          "slug": "oreo-dough",
+          "description": "Warm Oreo cookie dough with soft ice cream.",
+          "price": 6.95,
+          "isAvailable": true
+        },
+        {
+          "id": "rocher-dough",
+          "name": "Rocher Cookie Dough",
+          "slug": "rocher-dough",
+          "description": "Warm Rocher cookie dough with Nutella and soft ice cream.",
+          "price": 6.95,
+          "isAvailable": true
+        },
+        {
+          "id": "kinder-dough",
+          "name": "Kinder Choc White Cookie Dough",
+          "slug": "kinder-dough",
+          "description": "White cookie dough with Kinder and soft ice cream.",
+          "price": 6.95,
+          "isAvailable": true
+        },
+        {
+          "id": "fudge-cake",
+          "name": "Chocolate Fudge Cake",
+          "slug": "fudge-cake",
+          "description": "Chocolate fudge cake with soft ice cream.",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "/media/menu/chocolate-shake-loaded.jpg"
+        },
+        {
+          "id": "red-velvet",
+          "name": "Red Velvet Cake",
+          "slug": "red-velvet",
+          "description": "Red velvet with white chocolate sauce and soft ice cream.",
+          "price": 6.95,
+          "isAvailable": true
+        },
+        {
+          "id": "oreo-cheesecake",
+          "name": "Oreo Cheesecake",
+          "slug": "oreo-cheesecake",
+          "description": "Oreo cheesecake with soft serve.",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "/media/menu/chocolate-shake.jpg"
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "name": "Extras",
+      "slug": "extras",
+      "sortOrder": 15,
+      "items": [
+        {
+          "id": "pitta",
+          "name": "Pitta Bread",
+          "slug": "pitta",
+          "description": "Extra pitta.",
+          "price": 1.0,
+          "isAvailable": true
+        },
+        {
+          "id": "sauce-dip",
+          "name": "Sauce Dip",
+          "slug": "sauce-dip",
+          "description": "Extra sauce dip.",
+          "price": 0.6,
+          "isAvailable": true
+        },
+        {
+          "id": "cheese-slice",
+          "name": "Cheese Slice",
+          "slug": "cheese-slice",
+          "description": "Extra cheese.",
+          "price": 0.5,
+          "isAvailable": true
+        },
+        {
+          "id": "gherkins",
+          "name": "Gherkins",
+          "slug": "gherkins",
+          "description": "Pickled gherkins.",
+          "price": 0.75,
+          "isAvailable": true
+        },
+        {
+          "id": "bap",
+          "name": "Bap",
+          "slug": "bap",
+          "description": "Extra bap.",
+          "price": 1.4,
+          "isAvailable": true
+        }
+      ]
+    }
+  ]
+}

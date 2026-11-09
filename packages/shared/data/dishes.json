@@ -1,0 +1,1028 @@
+{
+  "dishes": [
+    {
+      "id": "burger-fries-drink",
+      "index": 1,
+      "name": "Burger Fries Drink",
+      "source": "burger_fries_drink.png",
+      "badges": [
+        "FLAME GRILLED",
+        "SECRET SAUCE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/burger-fries-drink/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/burger-fries-drink/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/burger-fries-drink/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/burger-fries-drink/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "chicken-burger",
+      "index": 2,
+      "name": "Chicken Burger",
+      "source": "chicken_burger.png",
+      "badges": [
+        "PERI PERI",
+        "HALAL FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/chicken-burger/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/chicken-burger/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/chicken-burger/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/chicken-burger/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "chicken-delight-fries",
+      "index": 3,
+      "name": "Chicken Delight Fries",
+      "source": "chicken_delight_fries.png",
+      "badges": [
+        "SMASH STACK",
+        "COVENTRY HEAT"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/chicken-delight-fries/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/chicken-delight-fries/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/chicken-delight-fries/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/chicken-delight-fries/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "chicken-wrap",
+      "index": 4,
+      "name": "Chicken Wrap",
+      "source": "chicken_wrap.png",
+      "badges": [
+        "CRISPY WINGS",
+        "BOLD FLAVOUR"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/chicken-wrap/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/chicken-wrap/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/chicken-wrap/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/chicken-wrap/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "chocolate-shake",
+      "index": 5,
+      "name": "Chocolate Shake",
+      "source": "chocolate_shake.png",
+      "badges": [
+        "WRAP IT UP",
+        "MADE FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/chocolate-shake/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/chocolate-shake/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/chocolate-shake/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/chocolate-shake/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "curly-fries",
+      "index": 6,
+      "name": "Curly Fries",
+      "source": "curly_fries.png",
+      "badges": [
+        "PLATTER TIME",
+        "SHARE SIZE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/curly-fries/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/curly-fries/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/curly-fries/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/curly-fries/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "double-cheeseburger",
+      "index": 7,
+      "name": "Double Cheeseburger",
+      "source": "double_cheeseburger.png",
+      "badges": [
+        "FLAME GRILLED",
+        "SECRET SAUCE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/double-cheeseburger/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/double-cheeseburger/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/double-cheeseburger/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/double-cheeseburger/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "flame-grilled-wings",
+      "index": 8,
+      "name": "Flame Grilled Wings",
+      "source": "flame_grilled_wings.png",
+      "badges": [
+        "PERI PERI",
+        "HALAL FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/flame-grilled-wings/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/flame-grilled-wings/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/flame-grilled-wings/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/flame-grilled-wings/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "fresh-hummus",
+      "index": 9,
+      "name": "Fresh Hummus",
+      "source": "fresh_hummus.png",
+      "badges": [
+        "SMASH STACK",
+        "COVENTRY HEAT"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/fresh-hummus/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/fresh-hummus/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/fresh-hummus/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/fresh-hummus/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "grilled-chicken",
+      "index": 10,
+      "name": "Grilled Chicken",
+      "source": "grilled_chicken.png",
+      "badges": [
+        "CRISPY WINGS",
+        "BOLD FLAVOUR"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/grilled-chicken/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/grilled-chicken/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/grilled-chicken/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/grilled-chicken/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "grilled-lamb-chops",
+      "index": 11,
+      "name": "Grilled Lamb Chops",
+      "source": "grilled_lamb_chops.png",
+      "badges": [
+        "WRAP IT UP",
+        "MADE FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/grilled-lamb-chops/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/grilled-lamb-chops/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/grilled-lamb-chops/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/grilled-lamb-chops/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "grilled-wings",
+      "index": 12,
+      "name": "Grilled Wings",
+      "source": "grilled_wings.png",
+      "badges": [
+        "PLATTER TIME",
+        "SHARE SIZE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/grilled-wings/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/grilled-wings/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/grilled-wings/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/grilled-wings/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "hummus",
+      "index": 13,
+      "name": "Hummus",
+      "source": "hummus.png",
+      "badges": [
+        "FLAME GRILLED",
+        "SECRET SAUCE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/hummus/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/hummus/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/hummus/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/hummus/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "jalapeno-garlic-bread",
+      "index": 14,
+      "name": "Jalapeno Garlic Bread",
+      "source": "jalapeno_garlic_bread.png",
+      "badges": [
+        "PERI PERI",
+        "HALAL FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/jalapeno-garlic-bread/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/jalapeno-garlic-bread/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/jalapeno-garlic-bread/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/jalapeno-garlic-bread/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "karak-chai",
+      "index": 15,
+      "name": "Karak Chai",
+      "source": "karak_chai.png",
+      "badges": [
+        "SMASH STACK",
+        "COVENTRY HEAT"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/karak-chai/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/karak-chai/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/karak-chai/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/karak-chai/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "kebab-wrap",
+      "index": 16,
+      "name": "Kebab Wrap",
+      "source": "kebab_wrap.png",
+      "badges": [
+        "CRISPY WINGS",
+        "BOLD FLAVOUR"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/kebab-wrap/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/kebab-wrap/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/kebab-wrap/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/kebab-wrap/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "lamb-chops",
+      "index": 17,
+      "name": "Lamb Chops",
+      "source": "lamb_chops.png",
+      "badges": [
+        "WRAP IT UP",
+        "MADE FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/lamb-chops/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/lamb-chops/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/lamb-chops/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/lamb-chops/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "lamb-chops-platter",
+      "index": 18,
+      "name": "Lamb Chops Platter",
+      "source": "lamb_chops_platter.png",
+      "badges": [
+        "PLATTER TIME",
+        "SHARE SIZE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/lamb-chops-platter/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/lamb-chops-platter/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/lamb-chops-platter/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/lamb-chops-platter/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "lamb-kebab-wrap",
+      "index": 19,
+      "name": "Lamb Kebab Wrap",
+      "source": "lamb_kebab_wrap.png",
+      "badges": [
+        "FLAME GRILLED",
+        "SECRET SAUCE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/lamb-kebab-wrap/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/lamb-kebab-wrap/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/lamb-kebab-wrap/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/lamb-kebab-wrap/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "lebanese-chicken-pitta",
+      "index": 20,
+      "name": "Lebanese Chicken Pitta",
+      "source": "lebanese_chicken_pitta.png",
+      "badges": [
+        "PERI PERI",
+        "HALAL FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/lebanese-chicken-pitta/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/lebanese-chicken-pitta/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/lebanese-chicken-pitta/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/lebanese-chicken-pitta/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "loaded-fries",
+      "index": 21,
+      "name": "Loaded Fries",
+      "source": "loaded_fries.png",
+      "badges": [
+        "SMASH STACK",
+        "COVENTRY HEAT"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/loaded-fries/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/loaded-fries/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/loaded-fries/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/loaded-fries/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "peri-peri-chicken",
+      "index": 22,
+      "name": "Peri Peri Chicken",
+      "source": "peri_peri_chicken.png",
+      "badges": [
+        "CRISPY WINGS",
+        "BOLD FLAVOUR"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/peri-peri-chicken/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/peri-peri-chicken/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/peri-peri-chicken/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/peri-peri-chicken/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "peri-peri-wings",
+      "index": 23,
+      "name": "Peri Peri Wings",
+      "source": "peri_peri_wings.png",
+      "badges": [
+        "WRAP IT UP",
+        "MADE FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/peri-peri-wings/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/peri-peri-wings/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/peri-peri-wings/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/peri-peri-wings/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "piri-piri-chicken",
+      "index": 24,
+      "name": "Piri Piri Chicken",
+      "source": "piri_piri_chicken.png",
+      "badges": [
+        "PLATTER TIME",
+        "SHARE SIZE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/piri-piri-chicken/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/piri-piri-chicken/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/piri-piri-chicken/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/piri-piri-chicken/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "piri-piri-chicken-wings",
+      "index": 25,
+      "name": "Piri Piri Chicken Wings",
+      "source": "piri_piri_chicken_wings.png",
+      "badges": [
+        "FLAME GRILLED",
+        "SECRET SAUCE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/piri-piri-chicken-wings/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/piri-piri-chicken-wings/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/piri-piri-chicken-wings/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/piri-piri-chicken-wings/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "roast-chicken",
+      "index": 26,
+      "name": "Roast Chicken",
+      "source": "roast_chicken.png",
+      "badges": [
+        "PERI PERI",
+        "HALAL FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/roast-chicken/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/roast-chicken/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/roast-chicken/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/roast-chicken/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "shawarma-wrap",
+      "index": 27,
+      "name": "Shawarma Wrap",
+      "source": "shawarma_wrap.png",
+      "badges": [
+        "SMASH STACK",
+        "COVENTRY HEAT"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/shawarma-wrap/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/shawarma-wrap/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/shawarma-wrap/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/shawarma-wrap/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "smash-burger",
+      "index": 28,
+      "name": "Smash Burger",
+      "source": "smash_burger.png",
+      "badges": [
+        "CRISPY WINGS",
+        "BOLD FLAVOUR"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/smash-burger/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/smash-burger/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/smash-burger/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/smash-burger/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "smash-burgers",
+      "index": 29,
+      "name": "Smash Burgers",
+      "source": "smash_burgers.png",
+      "badges": [
+        "WRAP IT UP",
+        "MADE FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/smash-burgers/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/smash-burgers/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/smash-burgers/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/smash-burgers/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "sweet-potato-fries",
+      "index": 30,
+      "name": "Sweet Potato Fries",
+      "source": "sweet_potato_fries.png",
+      "badges": [
+        "PLATTER TIME",
+        "SHARE SIZE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/sweet-potato-fries/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/sweet-potato-fries/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/sweet-potato-fries/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/sweet-potato-fries/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "veggie-burgers",
+      "index": 31,
+      "name": "Veggie Burgers",
+      "source": "veggie_burgers.png",
+      "badges": [
+        "FLAME GRILLED",
+        "SECRET SAUCE"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/veggie-burgers/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/veggie-burgers/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/veggie-burgers/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/veggie-burgers/04-top.png"
+        }
+      ]
+    },
+    {
+      "id": "weekend-burgers",
+      "index": 32,
+      "name": "Weekend Burgers",
+      "source": "weekend_burgers.png",
+      "badges": [
+        "PERI PERI",
+        "HALAL FRESH"
+      ],
+      "layers": [
+        {
+          "order": "01",
+          "part": "base",
+          "src": "/media/dishes/weekend-burgers/01-base.png"
+        },
+        {
+          "order": "02",
+          "part": "mid-low",
+          "src": "/media/dishes/weekend-burgers/02-mid-low.png"
+        },
+        {
+          "order": "03",
+          "part": "mid-high",
+          "src": "/media/dishes/weekend-burgers/03-mid-high.png"
+        },
+        {
+          "order": "04",
+          "part": "top",
+          "src": "/media/dishes/weekend-burgers/04-top.png"
+        }
+      ]
+    }
+  ]
+}

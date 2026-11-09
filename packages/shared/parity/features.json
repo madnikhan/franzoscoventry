@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "routes": [
+    "/",
+    "/menu",
+    "/order",
+    "/track",
+    "/track/[orderNumber]",
+    "/about",
+    "/contact",
+    "/opening-hours",
+    "/kitchen",
+    "/driver",
+    "/driver/login",
+    "/till",
+    "/admin"
+  ],
+  "features": {
+    "storefront.heroBowlAnimation": { "demo": true, "laravel": true },
+    "storefront.menuBrowse": { "demo": true, "laravel": true },
+    "storefront.cart": { "demo": true, "laravel": true },
+    "storefront.checkout": { "demo": true, "laravel": true },
+    "storefront.orderTrack": { "demo": true, "laravel": true },
+    "ops.kitchenDisplay": { "demo": true, "laravel": true },
+    "ops.driverApp": { "demo": true, "laravel": true },
+    "ops.tillPos": { "demo": true, "laravel": true },
+    "ops.admin": { "demo": true, "laravel": true },
+    "payments.sumup": { "demo": true, "laravel": true }
+  }
+}
