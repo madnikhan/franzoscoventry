@@ -100,12 +100,12 @@ export function SiteNav() {
 
   return (
     <nav className="fixed top-0 left-0 z-[999] flex w-full items-center justify-between px-[2.5vw] py-[1vw] max-md:px-[4vw] max-md:py-[2.5vw]">
-      <Link href="/" className="group relative z-10 shrink-0">
+      <Link href="/" className="group relative z-10 flex shrink-0 items-center self-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/media/logo/franzos-logo-nav.png"
           alt="Franzos"
-          className="h-14 w-auto max-w-[28vw] transition duration-300 group-hover:scale-105 group-hover:rotate-[-3deg] max-md:h-[12vw] md:h-20 lg:h-[9vw] lg:max-h-24 lg:max-w-[22vw]"
+          className="h-20 w-auto max-w-[46vw] object-contain object-left transition duration-300 group-hover:scale-105 group-hover:rotate-[-3deg] max-md:h-[20vw] max-md:max-w-[48vw] md:h-24 lg:h-[9vw] lg:max-h-28 lg:max-w-[24vw]"
         />
         <span className="sr-only">Franzos</span>
       </Link>
