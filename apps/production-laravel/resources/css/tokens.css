@@ -30,4 +30,14 @@
 
   --fz-radius: 999px;
   --fz-shadow: 4px 4px 0 var(--fz-outline);
+
+  --fz-nav-offset: calc(env(safe-area-inset-top, 0px) + 6.5rem);
+  --fz-nav-sticky: calc(env(safe-area-inset-top, 0px) + 4.75rem);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fz-nav-offset: 10rem;
+    --fz-nav-sticky: 7.5rem;
+  }
 }

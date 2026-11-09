@@ -99,7 +99,7 @@ export function HeroDishDots({
 }) {
   return (
     <div
-      className="pointer-events-auto absolute left-0 top-1/2 z-40 flex max-h-[min(48vh,420px)] -translate-y-1/2 flex-col items-center gap-1.5 overflow-y-auto py-1 max-md:left-1 max-md:max-h-[32vh] md:left-[1vw] md:gap-2"
+      className="pointer-events-auto absolute left-0 top-1/2 z-40 hidden max-h-[min(48vh,420px)] -translate-y-1/2 flex-col items-center gap-1.5 overflow-y-auto py-1 md:left-[1vw] md:flex md:gap-2"
       role="tablist"
       aria-label="Dish slides"
     >

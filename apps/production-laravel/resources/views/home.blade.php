@@ -37,7 +37,7 @@
     </div>
 
     {{-- Hero --}}
-    <section id="hero" class="relative -mt-[calc(14vw+5.5rem)] min-h-[110vw] overflow-hidden bg-[var(--fz-canvas)] px-[4vw] pt-[22vw] pb-[12vw] max-md:min-h-[185vw] max-md:pt-[calc(8vw+1rem)] md:-mt-40 md:min-h-[85vh] md:pt-32 md:pb-24">
+    <section id="hero" class="relative -mt-[var(--fz-nav-offset)] min-h-[100svh] overflow-hidden bg-[var(--fz-canvas)] px-[4vw] pt-[22vw] pb-[12vw] max-md:pt-[calc(8vw+1rem)] md:min-h-[85vh] md:pt-32 md:pb-24">
         <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
             <img src="{{ asset('media/hero/feast-table.jpg') }}" alt="" class="h-full w-full object-cover object-center" />
             <div class="absolute inset-0 bg-gradient-to-b from-[var(--fz-canvas)]/92 via-[var(--fz-canvas)]/78 to-[var(--fz-canvas)]/95"></div>
@@ -45,9 +45,9 @@
         </div>
         <p class="relative z-30 text-center text-[clamp(0.7rem,1.5vw,1rem)] font-bold tracking-[0.2em] text-[var(--fz-outline)]/70">{{ $copy['heroEyebrow'] ?? '' }}</p>
         <div class="relative z-30 mx-auto mt-[1vw] max-w-6xl text-center">
-            <div id="hero-dish-dots" class="pointer-events-auto absolute left-0 top-1/2 z-40 flex max-h-[min(48vh,420px)] -translate-y-1/2 flex-col items-center gap-1.5 overflow-y-auto py-1 max-md:left-1 max-md:max-h-[32vh] md:left-[1vw] md:gap-2" role="tablist" aria-label="Dish slides"></div>
-            <span id="hero-sticker-left" class="fz-sticker absolute left-[2vw] top-[8vw] z-40 -rotate-12 max-md:left-[8%]">{{ $copy['stickerFresh'] ?? 'FLAME GRILLED' }}</span>
-            <span id="hero-sticker-right" class="fz-sticker absolute right-[2vw] top-[18vw] z-40 rotate-8 max-md:right-0">{{ $copy['stickerBold'] ?? 'SECRET SAUCE' }}</span>
+            <div id="hero-dish-dots" class="pointer-events-auto absolute left-0 top-1/2 z-40 hidden max-h-[min(48vh,420px)] -translate-y-1/2 flex-col items-center gap-1.5 overflow-y-auto py-1 md:left-[1vw] md:flex md:gap-2" role="tablist" aria-label="Dish slides"></div>
+            <span id="hero-sticker-left" class="fz-sticker absolute left-[2vw] top-[8vw] z-40 -rotate-12 max-md:left-[8%] max-md:top-[4vw]">{{ $copy['stickerFresh'] ?? 'FLAME GRILLED' }}</span>
+            <span id="hero-sticker-right" class="fz-sticker absolute right-[2vw] top-[18vw] z-40 rotate-8 max-md:right-0 max-md:top-[12vw]">{{ $copy['stickerBold'] ?? 'SECRET SAUCE' }}</span>
             <h1 class="hero-title fz-outline-text relative z-30 font-display text-[clamp(3.5rem,14vw,9rem)] leading-[0.82]">{{ $copy['heroHeadline'] ?? 'THE FLAME' }}</h1>
             <p class="fz-outline-text relative z-20 mt-[0.5vw] font-display text-[clamp(2.2rem,9vw,5.5rem)] leading-none">{{ $copy['heroHeadlineAlt'] ?? 'THE CHICKEN' }}</p>
         </div>

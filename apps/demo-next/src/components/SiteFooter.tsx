@@ -86,7 +86,7 @@ export function SiteFooter() {
         <img
           src="/media/logo/franzos-logo.png"
           alt="Franzos"
-          className="pointer-events-none absolute inset-0 m-auto h-[80%] w-auto max-w-[90%] object-contain drop-shadow-[0_4px_0_var(--fz-outline)]"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-auto max-w-[90%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_4px_0_var(--fz-outline)]"
         />
       </div>
 

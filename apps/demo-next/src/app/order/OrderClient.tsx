@@ -82,17 +82,20 @@ export function OrderClient() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-8 lg:grid-cols-2">
-      <div className="space-y-4">
+    <form onSubmit={onSubmit} className="grid min-w-0 gap-8 lg:grid-cols-2">
+      <div className="min-w-0 space-y-4">
         <section className="fz-card p-5">
           <h2 className="font-display text-2xl">Your order</h2>
           <ul className="mt-4 space-y-3">
             {lines.map((line) => {
               const spice = line.customizations?.spice ?? "";
               return (
-                <li key={`${line.itemId}:${spice}`} className="flex gap-3 text-sm">
-                  <div className="flex-1">
-                    <p className="font-semibold">{line.name}</p>
+                <li
+                  key={`${line.itemId}:${spice}`}
+                  className="flex min-w-0 flex-wrap items-center gap-2 text-sm sm:flex-nowrap sm:gap-3"
+                >
+                  <div className="min-w-0 flex-1 basis-full sm:basis-auto">
+                    <p className="truncate font-semibold">{line.name}</p>
                     {spice && (
                       <p className="text-[color:var(--fz-muted)] capitalize">Spice: {spice}</p>
                     )}
@@ -105,14 +108,14 @@ export function OrderClient() {
                     onChange={(e) =>
                       updateQuantity(line.itemId, spice, parseInt(e.target.value, 10) || 1)
                     }
-                    className="w-14 rounded border px-1 py-0.5"
+                    className="w-14 shrink-0 rounded border px-1 py-0.5"
                   />
-                  <p className="w-20 text-right font-medium">
+                  <p className="w-20 shrink-0 text-right font-medium">
                     {formatMoney(line.unitPrice * line.quantity)}
                   </p>
                   <button
                     type="button"
-                    className="text-[color:var(--fz-flame)]"
+                    className="shrink-0 text-[color:var(--fz-flame)]"
                     onClick={() => removeLine(line.itemId, spice)}
                   >
                     ×

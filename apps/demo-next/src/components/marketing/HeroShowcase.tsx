@@ -41,7 +41,7 @@ export function HeroShowcase() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative -mt-[calc(14vw+5.5rem)] min-h-[110vw] overflow-hidden bg-[color:var(--fz-canvas)] px-[4vw] pb-[12vw] pt-[22vw] max-md:min-h-[185vw] max-md:pt-[calc(8vw+1rem)] md:-mt-40 md:min-h-[85vh] md:pb-24 md:pt-32"
+      className="relative -mt-[var(--fz-nav-offset)] min-h-[100svh] overflow-hidden bg-[color:var(--fz-canvas)] px-[4vw] pb-[12vw] pt-[22vw] max-md:pt-[calc(8vw+1rem)] md:min-h-[85vh] md:pb-24 md:pt-32"
     >
       {/* Feast atmosphere background */}
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>

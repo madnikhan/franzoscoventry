@@ -59,11 +59,11 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
         </div>
       </div>
 
-      <ol className="grid gap-2 sm:grid-cols-3">
+      <ol className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
         {STEPS.map((step, i) => (
           <li
             key={step}
-            className={`rounded-xl border px-3 py-2 text-xs font-semibold ${
+            className={`min-w-0 rounded-xl border px-3 py-2 text-xs font-semibold ${
               i <= stepIndex
                 ? "border-[color:var(--fz-flame)] bg-[color:var(--fz-cream)]"
                 : "border-[color:var(--fz-sand)] opacity-50"

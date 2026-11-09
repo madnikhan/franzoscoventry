@@ -29,14 +29,14 @@ export function MenuClient() {
   }
 
   return (
-    <div className="relative grid gap-6 lg:grid-cols-[minmax(11.5rem,14rem)_minmax(0,1fr)] lg:items-start lg:gap-10">
-      <aside className="sticky top-[calc(14vw+3.25rem)] z-20 -mx-4 bg-[color:var(--fz-cream)]/95 backdrop-blur-sm max-md:border-b max-md:border-[color:var(--fz-outline)]/15 md:top-24 lg:mx-0 lg:self-start lg:border-0 lg:bg-transparent lg:backdrop-blur-none">
+    <div className="relative grid min-w-0 w-full max-w-full gap-6 lg:grid-cols-[minmax(11.5rem,14rem)_minmax(0,1fr)] lg:items-start lg:gap-10">
+      <aside className="sticky top-[var(--fz-nav-sticky)] z-20 -mx-4 min-w-0 w-full max-w-full overflow-hidden bg-[color:var(--fz-cream)]/95 backdrop-blur-sm max-md:border-b max-md:border-[color:var(--fz-outline)]/15 lg:mx-0 lg:self-start lg:border-0 lg:bg-transparent lg:backdrop-blur-none">
         <p className="px-4 pb-2 pt-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[color:var(--fz-muted)] lg:px-0">
           Categories
         </p>
         <nav
           aria-label="Menu categories"
-          className="flex gap-2 overflow-x-auto px-4 pb-3 [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-1 lg:gap-2 lg:overflow-visible lg:px-0 lg:pb-0"
+          className="flex gap-2 overflow-x-auto overscroll-x-contain px-4 pb-3 [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-1 lg:gap-2 lg:overflow-visible lg:px-0 lg:pb-0"
         >
           {categories.map((cat) => {
             const selected = active === cat.id;
@@ -61,7 +61,7 @@ export function MenuClient() {
 
       <div className="min-w-0">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-          <h2 className="font-display text-3xl text-[color:var(--fz-char)] md:text-4xl">
+          <h2 className="min-w-0 font-display text-3xl text-[color:var(--fz-char)] md:text-4xl">
             {activeCategory?.name ?? "Menu"}
           </h2>
           <a
@@ -72,11 +72,11 @@ export function MenuClient() {
           </a>
         </div>
 
-        <ul className="grid gap-4 sm:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {items.map((item) => (
-            <li key={item.id} className="fz-card flex flex-col overflow-hidden">
+            <li key={item.id} className="fz-card flex min-w-0 flex-col overflow-hidden">
               {item.image ? (
-                <div className="relative aspect-[5/4] overflow-hidden bg-[color:var(--fz-cream)]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[color:var(--fz-cream)]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.image}
@@ -90,8 +90,10 @@ export function MenuClient() {
                   />
                 </div>
               ) : null}
-              <div className="flex flex-1 flex-col p-4 md:p-5">
-                <h3 className="font-display text-2xl leading-tight">{item.name}</h3>
+              <div className="flex min-w-0 flex-1 flex-col p-4 md:p-5">
+                <h3 className="min-w-0 break-words font-display text-xl leading-tight md:text-2xl">
+                  {item.name}
+                </h3>
                 <p className="mt-2 flex-1 text-sm text-[color:var(--fz-muted)]">
                   {item.description}
                 </p>
@@ -116,10 +118,10 @@ export function MenuClient() {
                     </select>
                   </label>
                 )}
-                <div className="mt-4 flex gap-2">
+                <div className="mt-4 flex flex-col gap-2 sm:flex-row">
                   <a
                     href={`tel:${businessConfig.phoneE164}`}
-                    className="fz-btn flex-1 bg-white text-center text-sm text-[color:var(--fz-outline)] md:hidden"
+                    className="fz-btn flex-1 bg-white px-4 py-2 text-center text-sm text-[color:var(--fz-outline)] md:hidden"
                   >
                     Call
                   </a>
@@ -127,7 +129,7 @@ export function MenuClient() {
                     type="button"
                     disabled={!item.isAvailable}
                     onClick={() => addToCart(item)}
-                    className="fz-btn fz-btn-primary flex-1 disabled:opacity-50 md:w-full"
+                    className="fz-btn fz-btn-primary flex-1 px-4 py-2 disabled:opacity-50 md:w-full"
                   >
                     Add to cart
                   </button>

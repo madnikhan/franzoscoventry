@@ -41,20 +41,20 @@
     <style>[x-cloak]{display:none!important}</style>
     @stack('head')
 </head>
-<body class="min-h-screen antialiased">
+<body class="flex min-h-screen flex-col antialiased">
     @include('partials.nav')
 
     @if (session('status'))
         <div class="bg-[var(--fz-leaf)] px-4 py-2 text-center text-sm text-white">{{ session('status') }}</div>
     @endif
 
-    <main class="w-full flex-1 pt-[calc(14vw+5.5rem)] md:pt-40">
+    <main class="w-full flex-1 pt-[var(--fz-nav-offset)]">
         @yield('content')
     </main>
 
     <footer class="relative mt-auto overflow-hidden border-t-[3px] border-[var(--fz-outline)] bg-[var(--fz-canvas)]">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-8">
-            <nav class="flex flex-wrap gap-4 text-lg font-bold">
+            <nav class="flex flex-wrap gap-4 text-lg font-bold" aria-label="Footer navigation">
                 <a href="{{ route('home') }}">Home</a>
                 <a href="{{ route('menu') }}">Menu</a>
                 <a href="{{ route('about') }}">About</a>
@@ -66,7 +66,7 @@
             @foreach (['lettuce','tomato','cheese','patty'] as $ing)
                 <img data-juggle src="{{ asset('media/loader/'.$ing.'.svg') }}" alt="" class="absolute h-12 w-12 -translate-x-1/2 md:h-16 md:w-16" />
             @endforeach
-            <img src="{{ asset('media/logo/franzos-logo.png') }}" alt="Franzos" class="pointer-events-none absolute inset-0 m-auto h-[80%] w-auto max-w-[90%] object-contain drop-shadow-[0_4px_0_var(--fz-outline)]" />
+            <img src="{{ asset('media/logo/franzos-logo.png') }}" alt="Franzos" class="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-auto max-w-[90%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_4px_0_var(--fz-outline)]" />
         </div>
         <div class="border-t-[3px] border-[var(--fz-outline)]/20 px-4 py-3 text-center text-sm">
             © {{ date('Y') }} {{ config('franzos.name') }} · {{ \App\Support\Copy::get('footerBlurb') }}

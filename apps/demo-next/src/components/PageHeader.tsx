@@ -7,11 +7,11 @@ export function PageHeader({
 }) {
   return (
     <div className="mb-8">
-      <h1 className="fz-outline-text font-display text-5xl leading-none tracking-wide md:text-6xl">
+      <h1 className="fz-outline-text font-display break-words text-[clamp(2rem,9vw,3.75rem)] leading-none tracking-wide md:text-6xl">
         {title}
       </h1>
       {subtitle && (
-        <p className="mt-3 max-w-2xl text-lg font-semibold text-[color:var(--fz-outline)]/80">
+        <p className="mt-3 max-w-2xl text-base font-semibold text-[color:var(--fz-outline)]/80 md:text-lg">
           {subtitle}
         </p>
       )}

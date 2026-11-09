@@ -6,11 +6,11 @@
 @php
     $phone = config('franzos.phoneE164') ?? config('franzos.phone');
 @endphp
-<div class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+<div class="mx-auto min-w-0 w-full max-w-6xl px-4 py-6 md:py-14">
     <div class="flex flex-wrap items-end justify-between gap-3">
-        <div>
-            <h1 class="font-[family-name:var(--fz-font-display)] text-4xl text-[var(--fz-flame)]">Menu</h1>
-            <p class="mt-2 text-[var(--fz-muted)]">Browse by category — call us to order, or add to cart.</p>
+        <div class="min-w-0">
+            <h1 class="fz-outline-text font-display break-words text-[clamp(2rem,9vw,3.75rem)] leading-none tracking-wide md:text-6xl">Our menu</h1>
+            <p class="mt-3 max-w-2xl text-base font-semibold text-[var(--fz-outline)]/80 md:text-lg">Browse by category — call us to order, or add to cart.</p>
         </div>
         @if ($phone)
             <a href="tel:{{ $phone }}" class="inline-flex items-center rounded-full border-[3px] border-[var(--fz-outline)] bg-[var(--fz-mustard)] px-4 py-2 text-sm font-bold text-[var(--fz-outline)] shadow-[3px_3px_0_var(--fz-outline)] md:hidden">
@@ -21,7 +21,7 @@
 
     <nav
         aria-label="Menu categories"
-        class="sticky top-[calc(14vw+3.25rem)] z-20 -mx-4 mt-6 flex gap-2 overflow-x-auto bg-[var(--fz-cream)]/95 px-4 py-3 backdrop-blur-sm [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:top-24 lg:mx-0 lg:mt-8 lg:grid lg:grid-cols-5 lg:gap-2 lg:overflow-visible lg:bg-transparent lg:px-0 lg:py-0 lg:backdrop-blur-none"
+        class="sticky top-[var(--fz-nav-sticky)] z-20 -mx-4 mt-6 flex min-w-0 w-full max-w-full gap-2 overflow-x-auto overscroll-x-contain bg-[var(--fz-cream)]/95 px-4 py-3 backdrop-blur-sm [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden max-md:border-b max-md:border-[var(--fz-outline)]/15 lg:mx-0 lg:mt-8 lg:grid lg:grid-cols-5 lg:gap-2 lg:overflow-visible lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:backdrop-blur-none"
     >
         @foreach ($categories as $category)
             <a
@@ -34,13 +34,13 @@
     </nav>
 
     @foreach ($categories as $category)
-        <section class="mt-10 scroll-mt-36 md:scroll-mt-28" id="{{ $category->slug }}">
-            <h2 class="font-[family-name:var(--fz-font-display)] text-3xl tracking-wide">{{ $category->name }}</h2>
-            <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <section class="mt-10 scroll-mt-[calc(var(--fz-nav-sticky)+1rem)]" id="{{ $category->slug }}">
+            <h2 class="font-display text-3xl tracking-wide md:text-4xl">{{ $category->name }}</h2>
+            <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                 @foreach ($category->menuItems as $item)
-                    <article class="overflow-hidden rounded-[var(--fz-radius)] border-[3px] border-[var(--fz-outline)] bg-white shadow-[var(--fz-shadow)]">
+                    <article class="fz-card min-w-0 overflow-hidden">
                         @if ($item->image)
-                            <div class="aspect-[5/4] overflow-hidden bg-[var(--fz-cream)]">
+                            <div class="aspect-[4/3] overflow-hidden bg-[var(--fz-cream)]">
                                 <img
                                     src="{{ $item->image }}"
                                     alt=""
@@ -49,8 +49,8 @@
                                 >
                             </div>
                         @endif
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg">{{ $item->name }}</h3>
+                        <div class="min-w-0 p-4 md:p-5">
+                            <h3 class="min-w-0 break-words font-display text-xl leading-tight md:text-2xl">{{ $item->name }}</h3>
                             <p class="mt-1 text-sm text-[var(--fz-muted)] line-clamp-2">{{ $item->description }}</p>
                             <p class="mt-2 font-bold text-[var(--fz-flame)]">£{{ number_format($item->price, 2) }}</p>
                             <form action="{{ route('menu.cart') }}" method="post" class="mt-3 flex flex-wrap gap-2 items-end">

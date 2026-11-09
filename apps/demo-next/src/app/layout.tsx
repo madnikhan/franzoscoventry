@@ -88,7 +88,7 @@ export default function RootLayout({
         <CartProvider>
           <MarketingChrome>
             <SiteNav />
-            <main className="marketing-main w-full flex-1 pt-[calc(14vw+5.5rem)] md:pt-40">
+            <main className="marketing-main w-full flex-1 pt-[var(--fz-nav-offset)]">
               {children}
             </main>
             <SiteFooter />

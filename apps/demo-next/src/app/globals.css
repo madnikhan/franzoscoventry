@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: clip;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -35,6 +39,7 @@ body {
   color: var(--fz-outline);
   font-family: var(--font-mouse), var(--fz-font-body);
   letter-spacing: 0.02em;
+  overflow-x: clip;
 }
 
 .font-display {
