@@ -4,8 +4,14 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion, useAnimationControls, useReducedMotion } from "framer-motion";
 import { PLATE_DROP_LAYERS } from "@/lib/plateDrop";
 
-const STAGGER = 0.34;
-const SPRING = { type: "spring" as const, stiffness: 140, damping: 22 };
+const STAGGER = 0.75;
+const SPRING = {
+  type: "spring" as const,
+  stiffness: 68,
+  damping: 18,
+  mass: 1.2,
+};
+const ENTER_DELAY = 0.45;
 
 export function HeroFoodStage() {
   const reducePref = useReducedMotion();
@@ -42,7 +48,7 @@ export function HeroFoodStage() {
       .start((i: number) => ({
         y: PLATE_DROP_LAYERS[i]?.settleY ?? 0,
         opacity: 1,
-        transition: { ...SPRING, delay: i * STAGGER },
+        transition: { ...SPRING, delay: ENTER_DELAY + i * STAGGER },
       }))
       .then(() => setPhase("hold"));
   }, [mounted, reduce, controls]);

@@ -62,13 +62,13 @@ export function BuildThePlate() {
               y: PLATE_DROP_LAYERS[i].settleY,
               opacity: 1,
               scale: 1,
-              duration: 0.55,
+              duration: 0.95,
               ease: "power2.out",
             },
-            (i - 1) * 0.28
+            (i - 1) * 0.55
           );
           if (labels[i]) {
-            tl.to(labels[i], { opacity: 1, duration: 0.3 }, (i - 1) * 0.28);
+            tl.to(labels[i], { opacity: 1, duration: 0.4 }, (i - 1) * 0.55);
           }
         });
         return;
@@ -82,7 +82,7 @@ export function BuildThePlate() {
           trigger: section,
           start: "top 60%",
           end: "bottom 35%",
-          scrub: 0.7,
+          scrub: 1.35,
           invalidateOnRefresh: true,
         },
       });
@@ -95,20 +95,20 @@ export function BuildThePlate() {
             y: PLATE_DROP_LAYERS[i].settleY,
             opacity: 1,
             scale: 1,
-            duration: 1,
+            duration: 1.4,
             ease: "none",
           },
-          (i - 1) * 0.55
+          (i - 1) * 0.85
         );
         if (labels[i]) {
-          tl.to(labels[i], { opacity: 1, duration: 0.35 }, (i - 1) * 0.55);
+          tl.to(labels[i], { opacity: 1, duration: 0.5 }, (i - 1) * 0.85);
           labels.forEach((other, j) => {
-            if (j !== i) tl.to(other, { opacity: 0.35, duration: 0.25 }, (i - 1) * 0.55);
+            if (j !== i) tl.to(other, { opacity: 0.35, duration: 0.35 }, (i - 1) * 0.85);
           });
         }
       });
 
-      tl.to(stage, { rotate: 1.2, duration: 0.8, ease: "none" }, "-=0.4");
+      tl.to(stage, { rotate: 1.2, duration: 1.1, ease: "none" }, "-=0.5");
     }, section);
 
     const refreshId = window.requestAnimationFrame(() => ScrollTrigger.refresh());
