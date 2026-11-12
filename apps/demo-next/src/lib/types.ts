@@ -1,6 +1,6 @@
 export type Role = "customer" | "driver" | "kitchen" | "till" | "admin";
 
-export type OrderType = "DELIVERY" | "COLLECTION" | "TAKEAWAY";
+export type OrderType = "DELIVERY" | "COLLECTION" | "TAKEAWAY" | "DINE_IN";
 
 export type OrderStatus =
   | "PENDING"
@@ -74,6 +74,7 @@ export interface Order {
   customerPhone: string;
   customerEmail?: string;
   address?: string;
+  tableNumber?: string;
   subtotal: number;
   deliveryFee: number;
   vat: number;
@@ -92,6 +93,7 @@ export interface CreateOrderPayload {
   customerPhone: string;
   customerEmail?: string;
   address?: string;
+  tableNumber?: string;
   notes?: string;
   items: CartLine[];
 }

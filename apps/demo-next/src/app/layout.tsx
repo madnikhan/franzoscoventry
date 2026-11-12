@@ -78,6 +78,16 @@ export const metadata: Metadata = {
     icon: [{ url: "/media/logo/franzos-logo-nav.png", type: "image/png" }],
     apple: [{ url: "/media/logo/franzos-logo.png", type: "image/png" }],
   },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: businessConfig.name,
+  },
+  other: {
+    "theme-color": "#120d14",
+    "mobile-web-app-capable": "yes",
+  },
 };
 
 export default function RootLayout({
@@ -86,9 +96,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${mouse.variable} ${modak.variable} ${outfit.variable} flex min-h-screen flex-col antialiased`}
+        suppressHydrationWarning
+        className={`fz-mosaic-wallpaper ${mouse.variable} ${modak.variable} ${outfit.variable} flex min-h-screen flex-col antialiased`}
       >
         <CartProvider>
           <MarketingChrome>

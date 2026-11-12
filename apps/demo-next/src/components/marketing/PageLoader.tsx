@@ -12,18 +12,24 @@ const STATUS = [
 ];
 
 const LOADER_KEY = "franzos_loader_dark_v1";
-const HERO_SRC = "/media/loader/weekend-burgers.png";
+const HERO_SRC = "/media/loader/peri-plate.png";
 
 export function PageLoader({ onDone }: { onDone?: () => void }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLImageElement>(null);
   const crumbsRef = useRef<HTMLDivElement>(null);
+  const onDoneRef = useRef(onDone);
   const [status, setStatus] = useState(STATUS[0]);
   const [progress, setProgress] = useState(0);
   const [hidden, setHidden] = useState(false);
 
+  onDoneRef.current = onDone;
+
   useEffect(() => {
+    let finished = false;
     const finish = () => {
+      if (finished) return;
+      finished = true;
       try {
         sessionStorage.setItem(LOADER_KEY, "1");
       } catch {
@@ -31,7 +37,7 @@ export function PageLoader({ onDone }: { onDone?: () => void }) {
       }
       document.body.style.overflow = "";
       setHidden(true);
-      onDone?.();
+      onDoneRef.current?.();
     };
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -44,98 +50,107 @@ export function PageLoader({ onDone }: { onDone?: () => void }) {
 
     if (reduce || seen) {
       finish();
-      return;
+      return () => {
+        document.body.style.overflow = "";
+      };
     }
 
     const hero = heroRef.current;
     const curtains = rootRef.current?.querySelectorAll<SVGElement>("[data-curtain]");
     const crumbs = crumbsRef.current?.querySelectorAll<HTMLElement>("[data-crumb]");
-    if (!hero || !curtains?.length) return;
-
-    document.body.style.overflow = "hidden";
-    gsap.set(hero, { y: -420, opacity: 0, scale: 0.72, rotate: -6 });
-    if (crumbs) gsap.set(crumbs, { opacity: 0, scale: 0 });
-
-    const tl = gsap.timeline({ onComplete: finish });
-
-    tl.to(hero, {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      rotate: 0,
-      duration: 0.55,
-      ease: "back.out(1.4)",
-      onStart: () => setStatus(STATUS[0]),
-    });
-
-    STATUS.slice(1).forEach((label, i) => {
-      tl.call(() => setStatus(label), undefined, 0.35 + i * 0.28);
-    });
-
-    const prog = { v: 0 };
-    tl.to(
-      prog,
-      {
-        v: 100,
-        duration: 1.2,
-        ease: "none",
-        onUpdate: () => setProgress(Math.round(prog.v)),
-      },
-      0
-    );
-
-    tl.to(
-      hero,
-      {
-        y: -14,
-        scale: 1.04,
-        duration: 0.35,
-        yoyo: true,
-        repeat: 1,
-        ease: "sine.inOut",
-      },
-      0.55
-    );
-
-    if (crumbs?.length) {
-      crumbs.forEach((c, i) => {
-        const angle = (i / crumbs.length) * Math.PI * 2;
-        const dist = 110 + (i % 3) * 26;
-        tl.to(
-          c,
-          {
-            opacity: 1,
-            scale: 1,
-            x: Math.cos(angle) * dist,
-            y: Math.sin(angle) * dist - 20,
-            duration: 0.4,
-            ease: "power2.out",
-          },
-          "-=0.08"
-        );
-        tl.to(c, { opacity: 0, duration: 0.22 }, "-=0.18");
-      });
+    if (!hero || !curtains?.length) {
+      finish();
+      return () => {
+        document.body.style.overflow = "";
+      };
     }
 
-    tl.to(".loader-ready", { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, "-=0.28");
-    tl.to(hero, { y: -28, scale: 1.06, duration: 0.2, ease: "power2.out" }, "-=0.1");
-    tl.to(hero, { y: 0, scale: 1, duration: 0.26, ease: "bounce.out" });
-    tl.to(hero, { y: -900, opacity: 0, duration: 0.38, ease: "power2.in" }, "+=0.05");
+    document.body.style.overflow = "hidden";
+    const ctx = gsap.context(() => {
+      gsap.set(hero, { y: -180, opacity: 0, scale: 0.82, rotate: -4 });
+      if (crumbs) gsap.set(crumbs, { opacity: 0, scale: 0 });
 
-    curtains.forEach((curtain, i) => {
+      const tl = gsap.timeline({ onComplete: finish });
+
+      tl.to(hero, {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        rotate: 0,
+        duration: 0.55,
+        ease: "back.out(1.4)",
+        onStart: () => setStatus(STATUS[0]),
+      });
+
+      STATUS.slice(1).forEach((label, i) => {
+        tl.call(() => setStatus(label), undefined, 0.35 + i * 0.28);
+      });
+
+      const prog = { v: 0 };
       tl.to(
-        curtain,
-        { yPercent: -125, duration: 0.45, ease: "power2.inOut" },
-        `+=${i === 0 ? 0.02 : 0.04}`
+        prog,
+        {
+          v: 100,
+          duration: 1.2,
+          ease: "none",
+          onUpdate: () => setProgress(Math.round(prog.v)),
+        },
+        0
       );
-    });
-    tl.to(rootRef.current, { autoAlpha: 0, duration: 0.1 }, "-=0.15");
+
+      tl.to(
+        hero,
+        {
+          y: -14,
+          scale: 1.04,
+          duration: 0.35,
+          yoyo: true,
+          repeat: 1,
+          ease: "sine.inOut",
+        },
+        0.55
+      );
+
+      if (crumbs?.length) {
+        crumbs.forEach((c, i) => {
+          const angle = (i / crumbs.length) * Math.PI * 2;
+          const dist = 110 + (i % 3) * 26;
+          tl.to(
+            c,
+            {
+              opacity: 1,
+              scale: 1,
+              x: Math.cos(angle) * dist,
+              y: Math.sin(angle) * dist - 20,
+              duration: 0.4,
+              ease: "power2.out",
+            },
+            "-=0.08"
+          );
+          tl.to(c, { opacity: 0, duration: 0.22 }, "-=0.18");
+        });
+      }
+
+      tl.to(".loader-ready", { opacity: 1, scale: 1, duration: 0.28, ease: "back.out(2)" }, "-=0.28");
+      tl.to(hero, { y: -16, scale: 1.04, duration: 0.2, ease: "power2.out" }, "-=0.1");
+      tl.to(hero, { y: 0, scale: 1, duration: 0.26, ease: "bounce.out" });
+      tl.to(hero, { y: -420, opacity: 0, duration: 0.38, ease: "power2.in" }, "+=0.05");
+
+      curtains.forEach((curtain, i) => {
+        tl.to(
+          curtain,
+          { yPercent: -125, duration: 0.45, ease: "power2.inOut" },
+          `+=${i === 0 ? 0.02 : 0.04}`
+        );
+      });
+      tl.to(rootRef.current, { autoAlpha: 0, duration: 0.1 }, "-=0.15");
+    }, rootRef);
 
     return () => {
-      tl.kill();
+      ctx.revert();
       document.body.style.overflow = "";
     };
-  }, [onDone]);
+  }, []);
 
   if (hidden) return null;
 

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { OrderClient } from "./OrderClient";
 import { PageHeader } from "@/components/PageHeader";
 import { PageShell } from "@/components/marketing/PageShell";
@@ -7,9 +8,11 @@ export default function OrderPage() {
     <PageShell>
       <PageHeader
         title="Checkout"
-        subtitle="Delivery, collection, or pay at till — guest checkout."
+        subtitle="Delivery, collection, dine-in, or pay at till — guest checkout."
       />
-      <OrderClient />
+      <Suspense fallback={<p className="text-[color:var(--fz-muted)]">Loading checkout…</p>}>
+        <OrderClient />
+      </Suspense>
     </PageShell>
   );
 }

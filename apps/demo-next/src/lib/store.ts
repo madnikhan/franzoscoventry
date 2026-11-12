@@ -154,6 +154,7 @@ class OrderStore {
       customerPhone: payload.customerPhone,
       customerEmail: payload.customerEmail,
       address: payload.address,
+      tableNumber: payload.tableNumber,
       notes: payload.notes,
       items: payload.items.map((line) => ({
         id: randomUUID(),

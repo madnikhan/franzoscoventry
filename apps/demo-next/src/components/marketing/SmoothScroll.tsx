@@ -2,6 +2,10 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function SmoothScroll() {
   useEffect(() => {
@@ -10,17 +14,21 @@ export function SmoothScroll() {
     const lenis = new Lenis({ duration: 1.2 });
     document.documentElement.classList.add("lenis", "lenis-smooth");
 
-    let raf = 0;
-    const tick = (time: number) => {
-      lenis.raf(time);
-      raf = requestAnimationFrame(tick);
+    lenis.on("scroll", ScrollTrigger.update);
+    const ticker = (time: number) => {
+      lenis.raf(time * 1000);
     };
-    raf = requestAnimationFrame(tick);
+    gsap.ticker.add(ticker);
+    gsap.ticker.lagSmoothing(0);
+
+    ScrollTrigger.refresh();
 
     return () => {
-      cancelAnimationFrame(raf);
+      gsap.ticker.remove(ticker);
       lenis.destroy();
       document.documentElement.classList.remove("lenis", "lenis-smooth");
+      // Refresh triggers after Lenis teardown without killing React-owned DOM.
+      ScrollTrigger.refresh();
     };
   }, []);
 

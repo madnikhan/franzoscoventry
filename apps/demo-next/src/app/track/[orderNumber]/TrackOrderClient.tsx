@@ -14,6 +14,23 @@ const STEPS = [
   "DELIVERED",
 ];
 
+function customizationLines(c: Record<string, string> | undefined): { kind: "+" | "−" | "·"; text: string }[] {
+  if (!c) return [];
+  const out: { kind: "+" | "−" | "·"; text: string }[] = [];
+  for (const [k, v] of Object.entries(c)) {
+    if (k === "builder") continue;
+    const lower = v.toLowerCase();
+    if (lower === "none" || lower.startsWith("no ")) {
+      out.push({ kind: "−", text: `${k}: ${v}` });
+    } else if (k === "extras" || lower.includes("bacon") || lower.includes("extra")) {
+      out.push({ kind: "+", text: v.includes(":") ? v : `${k}: ${v}` });
+    } else {
+      out.push({ kind: "·", text: `${k}: ${v}` });
+    }
+  }
+  return out;
+}
+
 export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
   const [order, setOrder] = useState<Order | null>(null);
   const [error, setError] = useState("");
@@ -21,7 +38,9 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
   useEffect(() => {
     let cancelled = false;
     async function load() {
-      const res = await fetch(`/api/orders/track/${encodeURIComponent(orderNumber)}`);
+      const res = await fetch(`/api/orders/track/${encodeURIComponent(orderNumber)}`, {
+        cache: "no-store",
+      });
       const data = await res.json();
       if (!res.ok) {
         if (!cancelled) setError(data.error ?? "Not found");
@@ -30,7 +49,7 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
       if (!cancelled) setOrder(data.order);
     }
     load();
-    const id = setInterval(load, 8000);
+    const id = setInterval(load, 4000);
     return () => {
       cancelled = true;
       clearInterval(id);
@@ -45,6 +64,18 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
   }
 
   const stepIndex = STEPS.indexOf(order.status);
+  const statusHeadline =
+    order.status === "PENDING"
+      ? "Waiting for kitchen"
+      : order.status === "CONFIRMED"
+        ? "Accepted — starting soon"
+        : order.status === "PREPARING"
+          ? "Kitchen is preparing"
+          : order.status === "READY_FOR_PICKUP"
+            ? order.tableNumber
+              ? "Ready — we’ll bring it to your table"
+              : "Ready for pickup"
+            : null;
 
   return (
     <div className="space-y-6">
@@ -52,6 +83,12 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
         <div>
           <p className="text-sm text-[color:var(--fz-muted)]">Status</p>
           <OrderStatusBadge status={order.status} />
+          {statusHeadline ? (
+            <p className="mt-2 text-sm font-semibold text-[color:var(--fz-mustard)]">{statusHeadline}</p>
+          ) : null}
+          {order.tableNumber ? (
+            <p className="mt-1 text-sm text-[color:var(--fz-muted)]">Table {order.tableNumber}</p>
+          ) : null}
         </div>
         <div className="text-right">
           <p className="text-sm text-[color:var(--fz-muted)]">Total</p>
@@ -76,18 +113,34 @@ export function TrackOrderClient({ orderNumber }: { orderNumber: string }) {
 
       <section className="fz-card p-5">
         <h2 className="font-display text-xl">Items</h2>
-        <ul className="mt-3 space-y-2 text-sm">
-          {order.items.map((item) => (
-            <li key={item.id} className="flex justify-between">
-              <span>
-                {item.quantity}× {item.name}
-                {item.customizations?.spice && (
-                  <span className="text-[color:var(--fz-muted)]"> ({item.customizations.spice})</span>
-                )}
-              </span>
-              <span>{formatMoney(item.unitPrice * item.quantity)}</span>
-            </li>
-          ))}
+        <ul className="mt-3 space-y-3 text-sm">
+          {order.items.map((item) => {
+            const diffs = customizationLines(item.customizations);
+            return (
+              <li key={item.id}>
+                <div className="flex justify-between gap-3">
+                  <span className="font-semibold">
+                    {item.quantity}× {item.name}
+                  </span>
+                  <span>{formatMoney(item.unitPrice * item.quantity)}</span>
+                </div>
+                {diffs.map((d) => (
+                  <p
+                    key={d.text}
+                    className={
+                      d.kind === "+"
+                        ? "text-[color:var(--fz-mustard)]"
+                        : d.kind === "−"
+                          ? "text-[color:var(--fz-rose)]"
+                          : "text-[color:var(--fz-muted)] capitalize"
+                    }
+                  >
+                    {d.kind} {d.text}
+                  </p>
+                ))}
+              </li>
+            );
+          })}
         </ul>
       </section>
     </div>

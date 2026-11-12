@@ -1,7 +1,7 @@
 {
   "version": 1,
   "roles": ["customer", "driver", "kitchen", "till", "admin"],
-  "orderTypes": ["DELIVERY", "COLLECTION", "TAKEAWAY"],
+  "orderTypes": ["DELIVERY", "COLLECTION", "TAKEAWAY", "DINE_IN"],
   "orderStatuses": [
     "PENDING",
     "CONFIRMED",
@@ -27,7 +27,7 @@
     "MenuItem": ["id", "categoryId", "name", "slug", "description", "price", "image", "isAvailable", "spiceSelectable"],
     "Customization": ["id", "menuItemId", "name", "required", "maxChoices"],
     "CustomizationChoice": ["id", "customizationId", "name", "priceDelta"],
-    "Order": ["id", "orderNumber", "type", "status", "paymentStatus", "customerName", "customerPhone", "customerEmail", "address", "subtotal", "deliveryFee", "vat", "total", "driverId", "notes"],
+    "Order": ["id", "orderNumber", "type", "status", "paymentStatus", "customerName", "customerPhone", "customerEmail", "address", "tableNumber", "subtotal", "deliveryFee", "vat", "total", "driverId", "notes"],
     "OrderItem": ["id", "orderId", "name", "quantity", "unitPrice", "customizations"],
     "Driver": ["id", "userId", "phone", "isAvailable", "lat", "lng"],
     "Payment": ["id", "orderId", "provider", "method", "amount", "status", "externalId"]

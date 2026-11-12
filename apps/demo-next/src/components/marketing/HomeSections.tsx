@@ -7,7 +7,7 @@ import { BuildThePlate } from "./BuildThePlate";
 export function HomeSections() {
   return (
     <>
-      <section className="bg-[color:var(--fz-canvas)] px-[4vw] py-[8vw] text-center max-md:py-16">
+      <section className="px-[4vw] py-[8vw] text-center max-md:py-16">
         <p className="text-[clamp(0.7rem,1.4vw,0.95rem)] font-bold tracking-[0.25em] text-[color:var(--fz-mustard)]">
           TOP CLASSIC
         </p>
@@ -85,21 +85,21 @@ export function HomeSections() {
         </div>
       </section>
 
-      <section className="relative z-0 bg-[color:var(--fz-elevated)] px-[4vw] py-[8vw] text-[color:var(--fz-ink)] max-md:py-16">
+      <section className="fz-mosaic-band relative z-0 px-[4vw] py-[8vw] text-[color:var(--fz-ink)] max-md:py-16">
         <p className="text-center text-[clamp(0.7rem,1.4vw,0.95rem)] font-bold tracking-[0.25em] text-[color:var(--fz-mustard)]">
           TAKE AWAY
         </p>
         <h2 className="fz-outline-text mx-auto mt-[1.5vw] max-w-5xl text-center font-display text-[clamp(2.2rem,7vw,4.5rem)] leading-[0.9]">
           {copyConfig.travelsTitle}
         </h2>
-        <p className="mx-auto mt-[2vw] max-w-2xl text-center text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[color:var(--fz-ink)]/85">
+        <p className="mx-auto mt-[2vw] max-w-2xl rounded-2xl bg-[color:var(--fz-canvas)]/85 px-4 py-3 text-center text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[color:var(--fz-ink)]/90 backdrop-blur-md">
           {copyConfig.travelsBody}
         </p>
         <div className="mx-auto mt-[3vw] flex max-w-4xl flex-wrap justify-center gap-[1vw] max-md:mt-8 max-md:gap-3">
           {["COVENTRY", "EARLSDON", "FOLESHILL", "CANLEY", "TILE HILL"].map((c) => (
             <span
               key={c}
-              className="rounded-full border-2 border-[color:var(--fz-outline)] bg-[color:var(--fz-surface)] px-[1.5vw] py-[0.7vw] text-[clamp(0.85rem,1.6vw,1.1rem)] font-bold text-[color:var(--fz-mustard)] shadow-[0_8px_20px_rgba(0,0,0,0.35)] max-md:px-4 max-md:py-2"
+              className="rounded-full border-2 border-[color:var(--fz-outline)] bg-[color:var(--fz-surface)]/90 px-[1.5vw] py-[0.7vw] text-[clamp(0.85rem,1.6vw,1.1rem)] font-bold text-[color:var(--fz-mustard)] shadow-[0_8px_20px_rgba(0,0,0,0.35)] max-md:px-4 max-md:py-2"
             >
               {c}
             </span>
@@ -107,19 +107,19 @@ export function HomeSections() {
         </div>
       </section>
       <WavyDivider
-        color="var(--fz-elevated)"
+        color="var(--fz-surface)"
         flip
         className="relative z-10 -mt-[3.5vw] h-[5vw] min-h-12"
       />
 
-      <section className="bg-[color:var(--fz-canvas)] px-[4vw] py-[10vw] text-center max-md:py-20">
+      <section className="fz-mosaic-band px-[4vw] py-[10vw] text-center max-md:py-20">
         <p className="text-[clamp(0.7rem,1.4vw,0.95rem)] font-bold tracking-[0.25em] text-[color:var(--fz-rose)]">
           FEEL IT
         </p>
         <h2 className="fz-outline-text mx-auto mt-[1.5vw] max-w-3xl font-display text-[clamp(2.5rem,8vw,5rem)] leading-none">
           {copyConfig.changeTitle}
         </h2>
-        <p className="mx-auto mt-[2vw] max-w-2xl text-[clamp(1rem,2vw,1.35rem)] font-semibold text-[color:var(--fz-ink)]/85">
+        <p className="mx-auto mt-[2vw] max-w-2xl rounded-2xl bg-[color:var(--fz-canvas)]/85 px-4 py-3 text-[clamp(1rem,2vw,1.35rem)] font-semibold text-[color:var(--fz-ink)]/90 backdrop-blur-md">
           {copyConfig.changeBody}
         </p>
         <div className="mt-[3vw] max-md:mt-8">

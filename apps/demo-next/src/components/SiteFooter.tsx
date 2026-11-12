@@ -60,8 +60,8 @@ export function SiteFooter() {
   }, []);
 
   return (
-    <footer className="relative mt-auto overflow-hidden border-t border-[color:var(--fz-outline)]/60 bg-[color:var(--fz-surface)] text-[color:var(--fz-ink)]">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-8">
+    <footer className="relative mt-auto overflow-hidden border-t border-[color:var(--fz-outline)]/60 text-[color:var(--fz-ink)]">
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 bg-[color:var(--fz-surface)]/90 px-4 py-8 backdrop-blur-sm">
         <nav className="flex flex-wrap gap-4 text-lg font-bold" aria-label="Footer navigation">
           <Link href="/" className="hover:text-[color:var(--fz-mustard)]">Home</Link>
           <Link href="/menu" className="hover:text-[color:var(--fz-mustard)]">Menu</Link>
@@ -71,27 +71,29 @@ export function SiteFooter() {
         <p className="text-base font-semibold text-[color:var(--fz-muted)]">{copyConfig.footerLine}</p>
       </div>
 
-      <div ref={stageRef} className="relative h-52 md:h-72">
-        {INGREDIENTS.map((src) => (
-          // eslint-disable-next-line @next/next/no-img-element
+      <div className="fz-mosaic-band">
+        <div ref={stageRef} className="relative h-52 md:h-72">
+          {INGREDIENTS.map((src) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={src}
+              data-juggle
+              src={src}
+              alt=""
+              className="absolute z-[2] h-12 w-12 -translate-x-1/2 md:h-16 md:w-16"
+            />
+          ))}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            key={src}
-            data-juggle
-            src={src}
-            alt=""
-            className="absolute h-12 w-12 -translate-x-1/2 md:h-16 md:w-16"
+            src="/media/logo/franzos-logo.png"
+            alt="Franzos"
+            className="pointer-events-none absolute left-1/2 top-1/2 z-[2] h-[80%] w-auto max-w-[90%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_12px_32px_rgba(213,153,91,0.35)]"
           />
-        ))}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/media/logo/franzos-logo.png"
-          alt="Franzos"
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-auto max-w-[90%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_12px_32px_rgba(213,153,91,0.35)]"
-        />
+        </div>
       </div>
 
-      <div className="border-t border-[color:var(--fz-outline)]/40 px-4 py-3 text-center text-sm text-[color:var(--fz-muted)]">
-        © {new Date().getFullYear()} {businessConfig.name} · {copyConfig.footerBlurb}
+      <div className="relative z-10 border-t border-[color:var(--fz-outline)]/40 bg-[color:var(--fz-surface)]/95 px-4 py-3 text-center text-sm text-[color:var(--fz-muted)]">
+        © 2026 {businessConfig.name} · {copyConfig.footerBlurb}
       </div>
     </footer>
   );

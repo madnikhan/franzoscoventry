@@ -36,11 +36,72 @@ html.lenis body {
 }
 
 body {
-  background: var(--fz-canvas);
+  background-color: var(--fz-canvas);
   color: var(--fz-ink);
   font-family: var(--font-body), var(--fz-font-body);
   letter-spacing: 0.01em;
   overflow-x: clip;
+}
+
+/* Subtle fixed mosaic atmosphere — single cover field, no tile seams */
+body.fz-mosaic-wallpaper {
+  background-color: var(--fz-canvas);
+  background-image: var(--fz-mosaic-scrim), var(--fz-mosaic);
+  background-size: auto, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
+}
+
+/* Ops boards: solid dark, no mosaic noise */
+body.fz-ops {
+  background-image: none;
+  background-color: var(--fz-canvas);
+}
+
+.fz-mosaic-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--fz-surface);
+}
+
+.fz-mosaic-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--fz-mosaic);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.55;
+}
+
+.fz-mosaic-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--fz-mosaic-band-scrim);
+  pointer-events: none;
+}
+
+.fz-mosaic-band > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  body.fz-mosaic-wallpaper {
+    background-attachment: scroll, scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.fz-mosaic-wallpaper {
+    background-attachment: scroll, scroll;
+  }
 }
 
 .font-display {
@@ -136,4 +197,21 @@ html.fz-custom-cursor select,
 html.fz-custom-cursor textarea,
 html.fz-custom-cursor label {
   cursor: pointer;
+}
+
+@media print {
+  body {
+    background: #fffaf4 !important;
+    color: #120d14 !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
 }

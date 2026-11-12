@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { MenuClient } from "./MenuClient";
 import { PageHeader } from "@/components/PageHeader";
 import { PageShell } from "@/components/marketing/PageShell";
@@ -7,7 +8,9 @@ export default function MenuPage() {
   return (
     <PageShell>
       <PageHeader title="Our menu" subtitle={copyConfig.tagline} />
-      <MenuClient />
+      <Suspense fallback={<p className="text-[color:var(--fz-muted)]">Loading menu…</p>}>
+        <MenuClient />
+      </Suspense>
     </PageShell>
   );
 }

@@ -20,6 +20,21 @@
   --fz-rose: #b05a65;
   --fz-ink: #f6e7c8;
 
+  /* Geometric mosaic brand texture — one large field, never small tiles */
+  --fz-mosaic: url("/media/brand/mosaic-wallpaper.jpg");
+  --fz-mosaic-scrim: linear-gradient(
+    165deg,
+    rgba(18, 13, 20, 0.96) 0%,
+    rgba(28, 20, 28, 0.94) 40%,
+    rgba(18, 13, 20, 0.97) 100%
+  );
+  --fz-mosaic-band-scrim: linear-gradient(
+    180deg,
+    rgba(18, 13, 20, 0.9) 0%,
+    rgba(28, 20, 28, 0.88) 50%,
+    rgba(18, 13, 20, 0.92) 100%
+  );
+
   /* Aliases kept for existing components */
   --fz-flame: #a1435b;
   --fz-flame-deep: #8a3550;
